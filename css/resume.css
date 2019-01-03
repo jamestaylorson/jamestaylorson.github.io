@@ -79,15 +79,16 @@ p.lead {
 
 .social-icons a {
   display: inline-block;
-  height: 1.7rem;
-  width: 1.7rem;
+  height: 3rem;
+  width: 3rem;
   background-color: #495057;
   color: #fff !important;
   border-radius: 100%;
   text-align: center;
-  font-size: 1rem;
-  line-height: 1.7rem;
+  font-size: 1.2rem;
+  line-height: 3rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .social-icons a:last-child {
@@ -200,6 +201,7 @@ section.resume-section .resume-item .resume-date {
 
 .bg-primary {
   background-color: #191919 !important;
+  background-image: linear-gradient(#000, #3c3c3c);
 }
 
 .text-primary {
