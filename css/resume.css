@@ -50,6 +50,10 @@ h4 {
   font-size: 1.2rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
 .outcome {
   font-family: 'Source Sans Pro', sans-serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';'
   font-size: 1.2rem;
@@ -106,7 +110,7 @@ p.lead {
 
 @media (min-width: 992px) {
   #sideNav {
-    text-align: center;
+    text-align: left;
     position: fixed;
     top: 0;
     left: 0;
@@ -130,7 +134,7 @@ p.lead {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.3rem solid #fff;
+    /*border: 0.3rem solid #004e86;*/
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -142,7 +146,7 @@ p.lead {
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    width: 100%;
+    /*width: 100%;*/
     margin-bottom: auto;
   }
   #sideNav .navbar-collapse .navbar-nav {
