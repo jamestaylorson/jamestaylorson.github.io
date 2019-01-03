@@ -54,6 +54,14 @@ strong {
   font-weight: 600;
 }
 
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-style: dashed;
+  border-width: 0.5px;
+}
+
 .outcome {
   font-family: 'Source Sans Pro', sans-serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';'
   font-size: 1.2rem;
