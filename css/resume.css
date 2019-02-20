@@ -183,7 +183,7 @@ section.resume-section .resume-item .resume-date {
 }
 .bg-primary {
   background-color: #191919 !important;
-  background-image: linear-gradient(#000, #3c3c3c);
+  background-image: linear-gradient(#000, #2c4348);
 }
 .text-primary {
   font-size: 1.2rem;
