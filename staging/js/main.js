@@ -35,9 +35,6 @@ var myChart = new Chart(ctx, {
                 yMin: 0,
                 yMax: 20,
                 backgroundColor: "rgba(250, 211, 144,0.2)",
-                onClick: function(e) {
-                    console.log("Box", e.type, this);
-                }
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -45,12 +42,9 @@ var myChart = new Chart(ctx, {
                 yScaleID: "y-axis-0",
                 xMin: "09/10",
                 xMax: "18/19",
-                yMin: 20,
+                yMin: 21,
                 yMax: 44,
                 backgroundColor: "rgba(248, 194, 145,0.2)",
-                onClick: function(e) {
-                    console.log("Box", e.type, this);
-                }
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -58,12 +52,9 @@ var myChart = new Chart(ctx, {
                 yScaleID: "y-axis-0",
                 xMin: "09/10",
                 xMax: "18/19",
-                yMin: 44,
+                yMin: 45,
                 yMax: 68,
                 backgroundColor: "rgba(106, 137, 204,0.2)",
-                onClick: function(e) {
-                    console.log("Box", e.type, this);
-                }
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -71,12 +62,9 @@ var myChart = new Chart(ctx, {
                 yScaleID: "y-axis-0",
                 xMin: "09/10",
                 xMax: "18/19",
-                yMin: 68,
+                yMin: 69,
                 yMax: 92,
                 backgroundColor: "rgba(130, 204, 221,0.2)",
-                onClick: function(e) {
-                    console.log("Box", e.type, this);
-                }
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -84,12 +72,9 @@ var myChart = new Chart(ctx, {
                 yScaleID: "y-axis-0",
                 xMin: "09/10",
                 xMax: "18/19",
-                yMin: 92,
+                yMin: 93,
                 yMax: 116,
                 backgroundColor: "rgba(184, 233, 148,0.2)",
-                onClick: function(e) {
-                    console.log("Box", e.type, this);
-                }
             }, ]
         },
         // Hide the legend //
@@ -99,6 +84,9 @@ var myChart = new Chart(ctx, {
         // Reverse the y axes //
         scales: {
             yAxes: [{
+                gridLines: {
+                display:false
+            },
                 ticks: {
                     beginAtZero: true,
                     reverse: true,
@@ -106,6 +94,12 @@ var myChart = new Chart(ctx, {
                     max: 116,
                     display: false
                 }
+            }],
+            xAxes: [{
+                gridLines: {
+                display:true
+            },
+                
             }]
         },
         maintainAspectRatio: false,
@@ -138,7 +132,7 @@ var myChart = new Chart(ctx, {
                         return context.active ? context.dataset.label + '\n' + (value -44) + nth(value -44) + ' in league one' :(value -44);
                     } else if (value > 20) {
                         return context.active ? context.dataset.label + '\n' + (value - 20) + nth(value -20) + ' in the championship' :(value - 20);
-                    } else if (value < 20) {
+                    } else if (value <= 20) {
                         return context.active ? context.dataset.label + '\n' + value + nth(value) + ' in the premier league.' :(value);
                     } else {
                         return (value);
