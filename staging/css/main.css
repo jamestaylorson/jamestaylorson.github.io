@@ -278,6 +278,11 @@ body {
   /*grid-gap: 1em;*/
 }
 
+p {
+  padding: 0;
+  margin: 5px;
+}
+
 header,
 footer {
   grid-column: 1 / span 2;
@@ -308,10 +313,9 @@ main {
   width: 100%;
 }
 
-header,
-aside,
-footer {
-  background: #eaeaea;
+header{
+  background: #ddd;
+
 }
 
 

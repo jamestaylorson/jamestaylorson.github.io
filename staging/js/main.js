@@ -34,7 +34,7 @@ var myChart = new Chart(ctx, {
                 xMax: "18/19",
                 yMin: 0,
                 yMax: 20,
-                backgroundColor: "rgba(250, 211, 144,0.2)",
+                backgroundColor: "rgba(250, 253, 255,0.5)",
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -44,7 +44,7 @@ var myChart = new Chart(ctx, {
                 xMax: "18/19",
                 yMin: 21,
                 yMax: 44,
-                backgroundColor: "rgba(248, 194, 145,0.2)",
+                backgroundColor: "rgba(241, 248, 255,0.5)",
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -54,7 +54,7 @@ var myChart = new Chart(ctx, {
                 xMax: "18/19",
                 yMin: 45,
                 yMax: 68,
-                backgroundColor: "rgba(106, 137, 204,0.2)",
+                backgroundColor: "rgba(232, 242, 255,0.5)",
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -64,7 +64,7 @@ var myChart = new Chart(ctx, {
                 xMax: "18/19",
                 yMin: 69,
                 yMax: 92,
-                backgroundColor: "rgba(130, 204, 221,0.2)",
+                backgroundColor: "rgba(220, 236, 255,0.5)",
             }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
@@ -74,7 +74,7 @@ var myChart = new Chart(ctx, {
                 xMax: "18/19",
                 yMin: 93,
                 yMax: 116,
-                backgroundColor: "rgba(184, 233, 148,0.2)",
+                backgroundColor: "rgba(190, 222, 255,0.5)",
             }, ]
         },
         // Hide the legend //
@@ -115,9 +115,9 @@ var myChart = new Chart(ctx, {
                 borderRadius: function(context) {
                     return context.active ? 0 : 32;
                 },
-                borderWidth: 1,
+                borderWidth: 3,
                 color: function(context) {
-                    return context.active ? 'black' : context.dataset.backgroundColor;
+                    return context.active ? 'white' : context.dataset.backgroundColor;
                 },
                 font: {
                     weight: 'bold'
@@ -125,15 +125,15 @@ var myChart = new Chart(ctx, {
                 formatter: function(value, context) {
             
                     if (value > 92) {
-                        return context.active ? context.dataset.label + '\n' + (value -92) + nth(value -92) + ' in the natioanl league' :(value -92);
+                        return context.active ? context.dataset.label + '\n' + (value -92) + nth(value -92) + ' in the National League' :(value -92);
                     } else if (value > 68) {
-                        return context.active ? context.dataset.label + '\n' + (value -68) + nth(value -68) + ' in league two' :(value -68);
+                        return context.active ? context.dataset.label + '\n' + (value -68) + nth(value -68) + ' in League Two' :(value -68);
                     } else if (value > 44) {
-                        return context.active ? context.dataset.label + '\n' + (value -44) + nth(value -44) + ' in league one' :(value -44);
+                        return context.active ? context.dataset.label + '\n' + (value -44) + nth(value -44) + ' in League One' :(value -44);
                     } else if (value > 20) {
-                        return context.active ? context.dataset.label + '\n' + (value - 20) + nth(value -20) + ' in the championship' :(value - 20);
+                        return context.active ? context.dataset.label + '\n' + (value - 20) + nth(value -20) + ' in the Championship' :(value - 20);
                     } else if (value <= 20) {
-                        return context.active ? context.dataset.label + '\n' + value + nth(value) + ' in the premier league.' :(value);
+                        return context.active ? context.dataset.label + '\n' + value + nth(value) + ' in the Premier League.' :(value);
                     } else {
                         return (value);
                     };
