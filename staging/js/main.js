@@ -25,8 +25,7 @@ var myChart = new Chart(ctx, {
     data: chartData,
     options: {
         annotation: {
-            annotations: [
-            {
+            annotations: [{
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
                 xScaleID: "x-axis-0",
@@ -39,8 +38,7 @@ var myChart = new Chart(ctx, {
                 onClick: function(e) {
                     console.log("Box", e.type, this);
                 }
-            },
-            {
+            }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
                 xScaleID: "x-axis-0",
@@ -53,8 +51,7 @@ var myChart = new Chart(ctx, {
                 onClick: function(e) {
                     console.log("Box", e.type, this);
                 }
-            },
-            {
+            }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
                 xScaleID: "x-axis-0",
@@ -67,8 +64,7 @@ var myChart = new Chart(ctx, {
                 onClick: function(e) {
                     console.log("Box", e.type, this);
                 }
-            },
-            {
+            }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
                 xScaleID: "x-axis-0",
@@ -81,13 +77,12 @@ var myChart = new Chart(ctx, {
                 onClick: function(e) {
                     console.log("Box", e.type, this);
                 }
-            },
-            {
+            }, {
                 drawTime: "beforeDatasetsDraw",
                 type: "box",
                 xScaleID: "x-axis-0",
                 yScaleID: "y-axis-0",
-                 xMin: "09/10",
+                xMin: "09/10",
                 xMax: "18/19",
                 yMin: 92,
                 yMax: 116,
@@ -95,8 +90,7 @@ var myChart = new Chart(ctx, {
                 onClick: function(e) {
                     console.log("Box", e.type, this);
                 }
-            }, 
-          ]
+            }, ]
         },
         // Hide the legend //
         legend: {
@@ -111,49 +105,50 @@ var myChart = new Chart(ctx, {
                     min: 0,
                     max: 116,
                     display: false
-
                 }
             }]
         },
+        maintainAspectRatio: false,
         tooltips: false,
         plugins: {
-          datalabels: {
-            backgroundColor: function(context) {
-              return context.active ? context.dataset.backgroundColor : 'white';
-            },
-            borderColor: function(context) {
-              return context.dataset.backgroundColor;
-            },
-            borderRadius: function(context) {
-              return context.active ? 0 : 32;
-            },
-            borderWidth: 1,
-            color: function(context) {
-              return context.active ? 'black' : context.dataset.backgroundColor;
-            },
-            font: {
-              weight: 'bold'
-            },
-            formatter: function(value, context) {   
-              
-              value = Math.round(value * 100) / 100;
-              
-              if (value > 92) {return (value -92);}
-              else if (value > 68) {return (value -68);} 
-              else if (value > 44) {return (value -44);} 
-              else if (value > 20) {return (value -20);} 
-              else {return (value);};
-              
+            datalabels: {
+                backgroundColor: function(context) {
+                    return context.active ? context.dataset.backgroundColor : 'white';
+                },
+                borderColor: function(context) {
+                    return context.dataset.backgroundColor;
+                },
+                borderRadius: function(context) {
+                    return context.active ? 0 : 32;
+                },
+                borderWidth: 1,
+                color: function(context) {
+                    return context.active ? 'black' : context.dataset.backgroundColor;
+                },
+                font: {
+                    weight: 'bold'
+                },
+                formatter: function(value, context) {
+            
+                    if (value > 92) {
+                        return context.active ? context.dataset.label + '\n' + (value -92) + nth(value -92) + ' in the natioanl league' :(value -92);
+                    } else if (value > 68) {
+                        return context.active ? context.dataset.label + '\n' + (value -68) + nth(value -68) + ' in league two' :(value -68);
+                    } else if (value > 44) {
+                        return context.active ? context.dataset.label + '\n' + (value -44) + nth(value -44) + ' in league one' :(value -44);
+                    } else if (value > 20) {
+                        return context.active ? context.dataset.label + '\n' + (value - 20) + nth(value -20) + ' in the championship' :(value - 20);
+                    } else if (value < 20) {
+                        return context.active ? context.dataset.label + '\n' + value + nth(value) + ' in the premier league.' :(value);
+                    } else {
+                        return (value);
+                    };
 
-
-              return context.active
-                ? context.dataset.label + '\n' + value + 'th in league two'
-                : (value);
-            },
-
-            offset: 8,
-            textAlign: 'center'
-          }
+                    function nth(n){return["st","nd","rd"][((n+90)%100-10)%10-1]||"th"}
+                },
+                offset: 8,
+                textAlign: 'center'
+            }
         },
     }
 });

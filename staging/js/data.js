@@ -292,5 +292,5 @@ var chartData = {
 {data: WycombeWanderers,label: "Wycombe Wanderers",borderColor: "#3e95cd",fill: false,hidden: true},
 {data: YeovilTown,label: "Yeovil Town",borderColor: "#3e95cd",fill: false,hidden: true},
 {data: YorkCity,label: "York City",borderColor: "#3e95cd",fill: false,hidden: true},
-    ] 
-    };
+] 
+};
