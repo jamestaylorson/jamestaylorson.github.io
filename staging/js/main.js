@@ -150,4 +150,18 @@ myLegendContainer.innerHTML = myChart.generateLegend();
 var legendItems = myLegendContainer.getElementsByTagName('li');
 for (var i = 0; i < legendItems.length; i += 1) {
     legendItems[i].addEventListener("click", legendClickCallback, false);
-}
+};
+
+document.getElementById('addData').addEventListener('click', function() {
+            if (myChart.data.datasets.length > 0) {
+                var year = YEARS[myChart.data.labels.length % YEARS.length];
+                myChart.data.labels.push(year);
+
+                myChart.data.datasets.forEach(function(dataset) {
+                    dataset.data.push(myChart.data.datasets.data);
+                });
+
+                myChart.update();
+                console.log()
+            }
+        });
