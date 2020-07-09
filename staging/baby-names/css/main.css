@@ -261,3 +261,52 @@ textarea {
   }
 }
 
+.temp-1 {
+          height: 70vh;
+        }
+
+        .center {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .name {
+          text-align: center;
+          font-size: 100px;
+          font-family: sans-serif;
+          font-weight: bold;
+        }
+        
+        .surname {
+          text-align: center;
+          font-size: 50px;
+          font-weight: bold;
+          color: gray;
+          font-family: sans-serif;
+        }
+      
+      .button {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          font-size: 20px;
+          color: #fff;
+          line-height: 150px;
+          text-align: center;
+          background: #000;
+          outline: none;
+          }
+
+      .button5 {border-radius: 50%;}
+
+      .alignButton {
+        position:relative;
+      }
+
+      .bottomMe {
+        position:absolute;
+        bottom:0;
+      }
+
