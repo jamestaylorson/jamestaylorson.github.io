@@ -22,13 +22,40 @@
   <meta name="theme-color" content="#fafafa">
 
   <style type="text/css">
+
+        #project {
+         -webkit-transition: opacity .5s ease-in-out;
+         -moz-transition: opacity .5s ease-in-out;
+         -ms-transition: opacity .5s ease-in-out;
+         -o-transition: opacity .5s ease-in-out;
+         transition: opacity .5s ease-in-out;
+      }
+
+        .temp-1 {
+          height: 70vh;
+        }
+
         .center {
           position: fixed;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-      }
+        }
 
+        .name {
+          text-align: center;
+          font-size: 100px;
+          font-family: sans-serif;
+          font-weight: bold;
+        }
+        
+        .surname {
+          text-align: center;
+          font-size: 50px;
+          font-weight: bold;
+          color: gray;
+          font-family: sans-serif;
+        }
       
       .button {
           width: 150px;
@@ -44,21 +71,36 @@
 
       .button5 {border-radius: 50%;}
 
+      .alignButton {
+        position:relative;
+      }
+
+      .bottomMe {
+        position:absolute;
+        bottom:0;
+      }
+
   </style>
 
 </head>
 
 <body>
 
-  
+ 
   <div class="center">
-    
-    <button class="button button5" onclick="document.location='boy.html'">Boy</button>
-    <button class="button button5" onclick="document.location='girl.html'">Girl</button>
-    <button class="button button5" onclick="document.location='non-gender.html'">Non-Gender</button>
 
+    <div class="temp-1">
+      <div class="name" id="quoteText"></div>
+      <div class="surname">Taylorson</div>
+    </div>
+
+<div class="temp-2">
+    <div class="alignButton">
+      <button class="bottomMe center button button5" id="submit">Spin</button>
+    </div>
   </div>
 
+  </div>
 
 
 
@@ -66,13 +108,8 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/non-gender.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
