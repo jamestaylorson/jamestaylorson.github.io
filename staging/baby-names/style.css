@@ -23,6 +23,7 @@ header, footer {
     grid-column: 1 / 4;
   }
 }
+  
 
 .gridShift{
     grid-column: 1 / 4;
@@ -37,13 +38,6 @@ footer {
   justify-content: center;
   height: 30vh;
 }
-
-
-
-
-
-
-
 
 .temp-1 {
   height: 70vh;
@@ -85,6 +79,15 @@ footer {
   background: #000;
   outline: none;
 }
+
+@media all and (min-width: 700px) {
+  .button {
+  width: 400px;
+  height: 400px;
+  font-size: 30px;
+  }
+}
+
 .button: hover {
   background: #1F1F1F;
 }
