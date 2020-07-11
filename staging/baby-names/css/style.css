@@ -159,7 +159,7 @@ html, body {
 .name {
   text-align: center;
   font-size: 15vw;
-  font-weight: bold;
+  font-weight: 900;
   grid-area: name;
   align-self: end;
   overflow: hidden;
