@@ -24,8 +24,8 @@ html, body {
   }
 
     .button {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   font-size: 15px;
   font-family: sans-serif;
@@ -55,7 +55,7 @@ html, body {
     grid-area: intro;
     justify-self: center;
     align-self: center;
-    padding: 40px;
+    padding: 20px;
     background: darkgray
   }
 
