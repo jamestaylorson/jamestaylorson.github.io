@@ -5,6 +5,9 @@ html, body {
   background: #eaeaea;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /*CONTAINER 1*/
@@ -22,6 +25,10 @@ html, body {
       "content"
       "content"
       "footer";
+  }
+
+  .intro {
+    font-size: 1.5em;
   }
 
   .button {
