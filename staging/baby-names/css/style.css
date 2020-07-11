@@ -159,7 +159,7 @@ html, body {
 
 .name {
   text-align: center;
-  font-size: min(max(25px, 15vw), 100px);
+  font-size: 15vw;
   font-family: sans-serif;
   font-weight: bold;
   grid-area: name;
