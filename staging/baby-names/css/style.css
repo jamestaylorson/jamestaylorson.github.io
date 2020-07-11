@@ -156,7 +156,7 @@ html, body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: auto 2fr 2fr 2fr;
+    grid-template-rows: auto ;
     grid-gap: 10px;
     grid-template-areas:
       "header"
