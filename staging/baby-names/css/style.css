@@ -167,12 +167,13 @@ html, body {
 
 .name {
   text-align: center;
-  font-size: 100px;
+  font-size: 15vw;
   font-family: sans-serif;
   font-weight: bold;
   grid-area: name;
   background: darkgray;
   align-self: end;
+  overflow: hidden;
 }
 .surname {
   text-align: center;
@@ -182,12 +183,13 @@ html, body {
   font-family: sans-serif;
   grid-area: surname;
   background: darkgray;
+  align-self: start;
 }
 .spin{
   grid-area: spin;
   background: darkgray;
   justify-self: center;
-  align-self: center;
+  align-self: start;
 }
 
   .spinButton {
@@ -214,7 +216,7 @@ html, body {
   outline: 0;
   background: transparent;
   text-align: center;
-  font-size: 50px;
+  font-size: 8vw;
   font-weight: bold;
   color: gray;
   font-family: sans-serif;
