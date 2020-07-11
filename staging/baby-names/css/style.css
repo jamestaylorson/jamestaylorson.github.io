@@ -10,7 +10,6 @@ html, body {
 /*CONTAINER 1*/
 
 .container1 {
-    font-size: 1.5em;
     height: 100%;
     width: 100%;
     display: grid;
@@ -167,12 +166,12 @@ html, body {
   overflow: hidden;
 }
 .surname {
-  text-align: center;
   font-weight: bold;
   color: gray;
   font-family: sans-serif;
   grid-area: surname;
   align-self: start;
+  justify-self: center;
   overflow: hidden;
 }
 .spin{
