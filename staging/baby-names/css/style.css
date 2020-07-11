@@ -15,7 +15,7 @@ html, body {
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-areas:
       "header"
       "intro"
@@ -61,25 +61,21 @@ html, body {
     grid-area: intro;
     justify-self: center;
     align-self: center;
-    /*background: darkgray*/
   }
 
   .button1 {
     justify-self: center;
     align-self: center;
-    /*background: darkgray*/
   }
 
   .button2 {
     justify-self: center;
     align-self: center;
-    /*background: darkgray*/
   }
 
   .button3 {
     justify-self: center;
     align-self: center;
-    /*background: darkgray*/
     }
 
 
@@ -87,7 +83,6 @@ html, body {
     grid-area: footer;
     justify-self: center;
     align-self: center;
-    /*background: darkgray*/
     color: lightgray;
     }
 
@@ -150,7 +145,6 @@ html, body {
 /*CONTAINER 2*/
 
 .container2 {
-    font-size: 1.5em;
     height: 100%;
     width: 100%;
     display: grid;
@@ -165,8 +159,8 @@ html, body {
 
 .name {
   text-align: center;
-  font-size: min(max(25px, 15vw), 100px);
-  font-family: sans-serif;
+/*  font-size: min(max(25px, 15vw), 100px);
+*/  font-family: sans-serif;
   font-weight: bold;
   grid-area: name;
   align-self: end;
@@ -179,6 +173,7 @@ html, body {
   font-family: sans-serif;
   grid-area: surname;
   align-self: start;
+  overflow: hidden;
 }
 .spin{
   grid-area: spin;
@@ -211,6 +206,7 @@ html, body {
   font-size: 8vw;
   font-weight: bold;
   color: gray;
+  overflow: hidden;
   &: : placeholder {
     color: transparent;
   }
