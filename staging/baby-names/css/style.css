@@ -46,7 +46,6 @@ html, body {
     grid-area: header;
     justify-self: center;
     align-self: center;
-    background: darkgray
   }
 
   .logo {
@@ -108,7 +107,6 @@ html, body {
 
   .spin {
     grid-column: 1 / 4;
-    background: green;
     grid-area: content;
     grid-row: 5 / 6;
   }
@@ -146,8 +144,8 @@ html, body {
   background: red;
   width: 95px;
   height: 95px;
+    }
 }
-  }
 
 /*CONTAINER 2*/
 
@@ -167,27 +165,23 @@ html, body {
 
 .name {
   text-align: center;
-  font-size: 15vw;
+  font-size: min(max(25px, 15vw), 100px);
   font-family: sans-serif;
   font-weight: bold;
   grid-area: name;
-  background: darkgray;
   align-self: end;
   overflow: hidden;
 }
 .surname {
   text-align: center;
-  font-size: 50px;
   font-weight: bold;
   color: gray;
   font-family: sans-serif;
   grid-area: surname;
-  background: darkgray;
   align-self: start;
 }
 .spin{
   grid-area: spin;
-  background: darkgray;
   justify-self: center;
   align-self: start;
 }
@@ -224,17 +218,17 @@ html, body {
     cursor: text;
   }
 }
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  
-}
+
 }
 /* reset input */
 .form__field{
 &: required,&: invalid {
   box-shadow: none;
 }
+}
+
+@media (min-width: 450px){
+.form__field {
+  font-size: 5vw;
+  }
 }
