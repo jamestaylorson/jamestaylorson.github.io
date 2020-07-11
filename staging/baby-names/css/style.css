@@ -7,7 +7,9 @@ html, body {
   font-size: 12px;
 }
 
-.container {
+/*CONTAINER 1*/
+
+.container1 {
     font-size: 1.5em;
     height: 100%;
     width: 100%;
@@ -23,7 +25,7 @@ html, body {
       "footer";
   }
 
-    .button {
+  .button {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -36,11 +38,15 @@ html, body {
   outline: none;
 }
 
+.button:hover {
+  background: #242424;
+}
+
   .header {
     grid-area: header;
     justify-self: center;
     align-self: center;
-    /*background: darkgray*/
+    background: darkgray
   }
 
   .logo {
@@ -109,7 +115,7 @@ html, body {
 
   
   @media (min-width: 450px){
-    .container{
+    .container1{
       grid-template-rows: auto 1fr 2fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas:
@@ -136,4 +142,102 @@ html, body {
     justify-self: start;
    /* background: darkgray*/
     }
+    .button: hover {
+  background: red;
+  width: 95px;
+  height: 95px;
+}
   }
+
+/*CONTAINER 2*/
+
+.container2 {
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 2fr 2fr 2fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header"
+      "name"
+      "surname"
+      "spin";
+  }
+
+.name {
+  text-align: center;
+  font-size: 100px;
+  font-family: sans-serif;
+  font-weight: bold;
+  grid-area: name;
+  background: darkgray;
+  align-self: end;
+}
+.surname {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: gray;
+  font-family: sans-serif;
+  grid-area: surname;
+  background: darkgray;
+}
+.spin{
+  grid-area: spin;
+  background: darkgray;
+  justify-self: center;
+  align-self: center;
+}
+
+  .spinButton {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  outline: none;
+}
+
+.spinButton:hover {
+  background: #242424;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: gray;
+  font-family: sans-serif;
+  &: : placeholder {
+    color: transparent;
+  }
+  &: placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+}
+}
+/* reset input */
+.form__field{
+&: required,&: invalid {
+  box-shadow: none;
+}
+}
