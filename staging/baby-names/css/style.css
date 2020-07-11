@@ -1,0 +1,138 @@
+html, body {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background: #eaeaea;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.container {
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr 2fr 2fr 2fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header"
+      "intro"
+      "content"
+      "content"
+      "content"
+      "footer";
+  }
+
+    .button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  outline: none;
+}
+
+  .header {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+    background: darkgray
+  }
+
+  .logo {
+    display: block;
+    height: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .intro {
+    grid-area: intro;
+    justify-self: center;
+    align-self: center;
+    padding: 40px;
+    background: darkgray
+  }
+
+  .button1 {
+    justify-self: center;
+    align-self: center;
+    background: darkgray
+  }
+
+  .button2 {
+    justify-self: center;
+    align-self: center;
+    background: darkgray
+  }
+
+  .button3 {
+    justify-self: center;
+    align-self: center;
+    background: darkgray
+    }
+
+
+  .footer {
+    grid-area: footer;
+    justify-self: center;
+    align-self: center;
+    background: darkgray
+    }
+
+  .first {
+    grid-column: 1 / 4;
+    background: yellow;
+    grid-area: content;
+    grid-row: 3 / 4;
+  }
+
+  .second {
+    grid-column: 1 / 4;
+    background: red;
+    grid-area: content;
+    grid-row: 4 / 5;
+  }
+
+  .spin {
+    grid-column: 1 / 4;
+    background: green;
+    grid-area: content;
+    grid-row: 5 / 6;
+  }
+
+  
+  @media (min-width: 450px){
+    .container{
+      grid-template-rows: auto 1fr 2fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "header header header"
+        "intro intro intro"
+        "content content content"
+        "footer footer footer";
+    }
+  
+  .button1 {
+    grid-column: 1 / 2;
+    justify-self: end;
+    background: darkgray
+  }
+
+  .button2 {
+    grid-column: 2 / 3;
+    justify-self: center;
+    background: darkgray
+  }
+
+  .button3 {
+    grid-column: 3 / 4;
+    justify-self: start;
+    background: darkgray
+    }
+  }

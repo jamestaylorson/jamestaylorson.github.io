@@ -2,35 +2,31 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta name=”viewport” content=”width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no” />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Say my name</title>
-  <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="grid">
-  <header>
-    <img class="logo" src="img/logo.png">
-  </header>
 
-  <aside class="sidebar-left">
-    <button class="button button4" onclick="document.location='boy.html'">BOY</button>
-  </aside>
+<div class="container">
+  <div class="header"><img class="logo" src="img/logo.png"></div>
+  <div class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 
-  <main>
-    <button class="button button4" onclick="document.location='girl.html'">GIRL</button>
-  </main>
+  <div class="button1">
+    <button class="button" onclick="document.location='boy.html'">BOY</button>
+  </div>
 
-  <aside class="sidebar-right">
-    <button class="button button4" onclick="document.location='non-gender.html'">NON-GENDER</button>
-  </aside>
+  <div class="button2">
+    <button class="button" onclick="document.location='girl.html'">GIRL</button>
+  </div>
   
-  <footer>
-    << Footer >>
-  </footer>
+  <div class="button3">
+    <button class="button" onclick="document.location='non-gender.html'">NON-GENDER</button>
+  </div>
+
+  <div class="footer">Footer</div>
+  
 </div>
-<!-- partial -->
   
 </body>
 </html>
