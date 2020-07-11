@@ -45,11 +45,11 @@ html, body {
   .header {
     grid-area: header;
     justify-self: center;
-    align-self: center;
+    align-self: end;
   }
 
   .logo {
-    padding: 10px;
+    padding-top: 20px;
     display: block;
     height: 50%;
     width: 50%;
