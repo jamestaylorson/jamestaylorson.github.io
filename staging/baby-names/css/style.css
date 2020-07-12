@@ -2,12 +2,18 @@ html, body {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  background: #eaeaea;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
   position: fixed;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+}
+
+.stacked-linear {
+  background:
+      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
 
 /*CONTAINER 1*/
@@ -89,19 +95,16 @@ html, body {
     grid-area: footer;
     justify-self: center;
     align-self: center;
-    color: lightgray;
     }
 
   .first {
     grid-column: 1 / 4;
-    background: yellow;
     grid-area: content;
     grid-row: 3 / 4;
   }
 
   .second {
     grid-column: 1 / 4;
-    background: red;
     grid-area: content;
     grid-row: 4 / 5;
   }
@@ -127,19 +130,16 @@ html, body {
   .button1 {
     grid-column: 1 / 2;
     justify-self: end;
-    /*background: darkgray*/
   }
 
   .button2 {
     grid-column: 2 / 3;
     justify-self: center;
-   /* background: darkgray*/
   }
 
   .button3 {
     grid-column: 3 / 4;
     justify-self: start;
-   /* background: darkgray*/
     }
     .button: hover {
   background: red;
@@ -172,8 +172,6 @@ html, body {
   overflow: hidden;
 }
 .surname {
-  font-weight: bold;
-  color: gray;
   grid-area: surname;
   align-self: start;
   justify-self: center;
@@ -208,8 +206,8 @@ html, body {
   background: transparent;
   text-align: center;
   font-size: 8vw;
-  font-weight: 300;
-  color: gray;
+  font-weight: 500;
+  color: #000;
   overflow: hidden;
   &: : placeholder {
     color: transparent;
@@ -229,7 +227,7 @@ input:focus::placeholder {
 .form__field{
 &: required,&: invalid {
   box-shadow: none;
-}
+  }
 }
 
 @media (min-width: 450px){
