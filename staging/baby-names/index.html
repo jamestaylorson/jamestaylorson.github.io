@@ -17,7 +17,7 @@
 <script>
 $(document).ready(function(){
   $(".btn1").click(function(){
-    $(".fadeDiv").fadeOut();
+    $(".fadeDiv").fadeOut(1500);
   });
 });
 </script>
@@ -27,13 +27,15 @@ $(document).ready(function(){
     height: 100%;
     width: 100%;
     z-index: 500;
+    display: block;
+    position: fixed;
   }
 </style>
 </head>
 <body>
 
 <div class="blackDiv btn1 fadeDiv">
-  <img src="img/cover.png" class="center">
+  <img src="img/SmN.svg" class="center">
 </div>
 
 <div class="container1 viewportsize" >
