@@ -11,6 +11,11 @@ html, body {
   touch-action: manipulation;
 }
 
+a,
+a label {
+    cursor: pointer;
+}
+
 /*CONTAINER 1*/
 
 .container1 {

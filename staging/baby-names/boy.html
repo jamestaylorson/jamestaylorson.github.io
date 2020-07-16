@@ -14,6 +14,15 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).on("keypress", "input", function(e){
+        if(e.which == 13){
+            $(this).focusout();
+        }
+    });
+</script>
+
 <script type="text/javascript">
   $(function() {
     $(".form__field").focusin(function() {
@@ -23,6 +32,8 @@
     });
 });
 </script>
+
+
 </head>
 <body>
 
