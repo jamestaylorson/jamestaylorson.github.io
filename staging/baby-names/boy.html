@@ -13,6 +13,16 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".form__field").focusin(function() {
+        $(".spinButton").hide();
+    }).focusout(function () {
+        $(".spinButton").show();
+    });
+});
+</script>
 </head>
 <body>
 
@@ -30,7 +40,10 @@
 <div class="spin">
   <button class="spinButton" id="submit">SPIN</button>
 </div>
-  <!-- <div class="footer">Footer</div> -->
+  
+    <div class="footer">
+      <a href="https://www.buymeacoffee.com/depotlabs" target="_blank"><img class="labs" src="img/labs.svg"/></a>
+  </div>
   
 </div>
   
