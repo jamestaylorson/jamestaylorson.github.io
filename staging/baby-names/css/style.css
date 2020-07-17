@@ -17,6 +17,13 @@ a label {
     cursor: pointer;
 }
 
+*:focus {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
 /*CONTAINER 1*/
 
 .container1 {
