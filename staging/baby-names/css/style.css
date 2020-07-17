@@ -1,6 +1,5 @@
 html, body {
   margin: 0 auto;
-  width: 100%;
   height: 100%;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
@@ -30,14 +29,13 @@ a label {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-rows: 80px 2fr 2fr 2fr 1fr;
+    grid-template-rows: 80px 2fr 2fr 2fr;
     grid-gap: 10px;
     grid-template-areas:
       "header"
       "content"
       "content"
-      "content"
-      "footer";
+      "content";
   }
 
   .blackDiv {
@@ -94,17 +92,17 @@ a label {
     align-self: center;
   }
 
-  .leftButton {
+  .boyButton {
+    justify-self: center;
+    align-self: end;
+  }
+  .girlButton {
     justify-self: center;
     align-self: center;
   }
-  .middleButton {
+  .gnButton {
     justify-self: center;
-    align-self: center;
-  }
-  .rightButton {
-    justify-self: center;
-    align-self: center;
+    align-self: start;
   }
 
   .footer {
@@ -142,17 +140,17 @@ a label {
         "footer footer footer";
     }
   
-  .leftButton {
+  .boyButton {
     grid-column: 1 / 2;
     justify-self: end;
   }
 
-  .middleButton {
+  .girlButton {
     grid-column: 2 / 3;
     justify-self: center;
   }
 
-  .rightButton {
+  .gnButton {
     grid-column: 3 / 4;
     justify-self: start;
     }
