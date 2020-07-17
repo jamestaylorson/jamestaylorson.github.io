@@ -143,21 +143,19 @@ a label {
   .boyButton {
     grid-column: 1 / 2;
     justify-self: end;
+    align-self: center;
   }
 
   .girlButton {
     grid-column: 2 / 3;
     justify-self: center;
+    align-self: center;
   }
 
   .gnButton {
     grid-column: 3 / 4;
     justify-self: start;
-    }
-    .button: hover {
-  background: red;
-  width: 95px;
-  height: 95px;
+    align-self: center;
     }
 }
 
@@ -306,19 +304,3 @@ input:focus::placeholder {
     justify-self: end;
     margin: 0px 30px;
   }
-
-  @media screen and (orientation: landscape) {
-      html {
-        /* Rotate the content container */
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        /* Set content width to viewport height */
-        width: 100vh;
-        /* Set content height to viewport width */
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-    }
