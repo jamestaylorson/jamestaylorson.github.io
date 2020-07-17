@@ -29,8 +29,8 @@ $(function () {
   });
 });
 
-// Hide coffee div 5s
+// Hide coffee div 10s
 $(document).ready(function () {
   $("#hideMe").hide();
-  $("#hideMe").delay(5000).fadeIn(500);
+  $("#hideMe").delay(15000).fadeIn(500);
 });
