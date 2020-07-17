@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172922598-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172922598-1');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title>Say my name</title>
+  <title>Say ma Name</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,22 +23,15 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $(".btn1").click(function(){
-    $(".fadeDiv").fadeOut(500);
-  });
-});
-</script>
-
 </head>
-<body>
+<body class="viewportsize">
 
 <div class="blackDiv btn1 fadeDiv">
   <img src="img/cover.svg" class="center">
+  <img src="img/cover_logo.svg" class="bottom">
 </div>
 
-<div class="container1 viewportsize" >
+<div class="container1" >
   <div class="header">
     <img class="logo" src="img/logo.png">
   </div>
@@ -43,13 +45,13 @@ $(document).ready(function(){
   </div>
   
   <div class="content rightButton">
-    <button class="button" onclick="document.location='non-gender.html'">NON-GENDER</button>
+    <button class="button" onclick="document.location='gender-neutral.html'">GENDER NEUTRAL</button>
   </div>
 
   <div class="footer">
       <a href="https://www.buymeacoffee.com/depotlabs" target="_blank"><img class="labs" src="img/labs.svg"/></a>
   </div>
 
-  <script src="js/viewport.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
