@@ -85,8 +85,8 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 gridLines: {
-                display:false
-            },
+                    display: false
+                },
                 ticks: {
                     beginAtZero: true,
                     reverse: true,
@@ -97,9 +97,8 @@ var myChart = new Chart(ctx, {
             }],
             xAxes: [{
                 gridLines: {
-                display:true
-            },
-                
+                    display: true
+                },
             }]
         },
         maintainAspectRatio: false,
@@ -123,22 +122,23 @@ var myChart = new Chart(ctx, {
                     weight: 'bold'
                 },
                 formatter: function(value, context) {
-            
                     if (value > 92) {
-                        return context.active ? context.dataset.label + '\n' + (value -92) + nth(value -92) + ' in the National League' :(value -92);
+                        return context.active ? context.dataset.label + '\n' + (value - 92) + nth(value - 92) + ' in the National League' : (value - 92);
                     } else if (value > 68) {
-                        return context.active ? context.dataset.label + '\n' + (value -68) + nth(value -68) + ' in League Two' :(value -68);
+                        return context.active ? context.dataset.label + '\n' + (value - 68) + nth(value - 68) + ' in League Two' : (value - 68);
                     } else if (value > 44) {
-                        return context.active ? context.dataset.label + '\n' + (value -44) + nth(value -44) + ' in League One' :(value -44);
+                        return context.active ? context.dataset.label + '\n' + (value - 44) + nth(value - 44) + ' in League One' : (value - 44);
                     } else if (value > 20) {
-                        return context.active ? context.dataset.label + '\n' + (value - 20) + nth(value -20) + ' in the Championship' :(value - 20);
+                        return context.active ? context.dataset.label + '\n' + (value - 20) + nth(value - 20) + ' in the Championship' : (value - 20);
                     } else if (value <= 20) {
-                        return context.active ? context.dataset.label + '\n' + value + nth(value) + ' in the Premier League.' :(value);
+                        return context.active ? context.dataset.label + '\n' + value + nth(value) + ' in the Premier League.' : (value);
                     } else {
                         return (value);
                     };
 
-                    function nth(n){return["st","nd","rd"][((n+90)%100-10)%10-1]||"th"}
+                    function nth(n) {
+                        return ["st", "nd", "rd"][((n + 90) % 100 - 10) % 10 - 1] || "th"
+                    }
                 },
                 offset: 8,
                 textAlign: 'center'
@@ -151,17 +151,14 @@ var legendItems = myLegendContainer.getElementsByTagName('li');
 for (var i = 0; i < legendItems.length; i += 1) {
     legendItems[i].addEventListener("click", legendClickCallback, false);
 };
-
 document.getElementById('addData').addEventListener('click', function() {
-            if (myChart.data.datasets.length > 0) {
-                var year = YEARS[myChart.data.labels.length % YEARS.length];
-                myChart.data.labels.push(year);
-
-                myChart.data.datasets.forEach(function(dataset) {
-                    dataset.data.push(myChart.data.datasets.data);
-                });
-
-                myChart.update();
-                console.log()
-            }
+    if (myChart.data.datasets.length > 0) {
+        var year = YEARS[myChart.data.labels.length % YEARS.length];
+        myChart.data.labels.push(year);
+        myChart.data.datasets.forEach(function(dataset) {
+            dataset.data.push(myChart.data.datasets.data);
         });
+        myChart.update();
+        console.log()
+    }
+});
