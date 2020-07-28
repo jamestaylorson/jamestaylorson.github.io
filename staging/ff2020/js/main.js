@@ -26,8 +26,8 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
                 rpi.innerHTML = '<img src=img/' + entries[i].gsx$inimage.$t + '.png>';
                 oui.innerHTML = '<img src=img/outIcon.svg>';
                 ini.innerHTML = '<img src=img/inIcon.svg>';
-                lpn.innerHTML = entries[i].gsx$transferout.$t;
-                rpn.innerHTML = entries[i].gsx$transferin.$t;
+                lpn.innerHTML = '<span class="firstName">' + entries[i].gsx$fnout.$t + '</span>' + '<br>' + '<span class="secondName">' + entries[i].gsx$lnout.$t + '</span>';
+                rpn.innerHTML = '<span class="firstName">' + entries[i].gsx$fnin.$t + '</span>' + '<br>' + '<span class="secondName">' + entries[i].gsx$lnin.$t + '</span>';
                 pl.innerHTML = 'P&L: ' + entries[i].gsx$pandl.$t; + 'm';
                 im.innerHTML = entries[i].gsx$buyvalue.$t + 'm';
                 om.innerHTML = entries[i].gsx$salevalue.$t + 'm';
