@@ -1,0 +1,110 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 10% 1fr 10%;
+  height: 100vh;
+  grid-template-areas: "header""subHead""content""footer";
+}
+.header {
+  grid-area: header;
+  background: #321F65;
+}
+.subHead {
+  grid-area: subHead;
+  background: #58448B;
+}
+#content {
+  grid-area: content;
+  overflow: auto;
+}
+.footer {
+  grid-area: footer;
+  background: #321F65;
+}
+.nested-grid-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 3em 1em 3em 1em;
+  grid-template-areas: "manager manager manager manager""leftPlayerImage outIcon inIcon rightPlayerImage""leftPlayerImage outMil inMil rightPlayerImage""leftPlayerName PandL PandL rightPlayerName";
+}
+.manager {
+  grid-area: manager;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 100;
+}
+.leftPlayerImage {
+  grid-area: leftPlayerImage;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightPlayerImage {
+  grid-area: rightPlayerImage;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftPlayerImage img{
+  width: 60%;
+}
+
+.rightPlayerImage img{
+  width: 60%;
+}
+
+.leftPlayerName {
+  grid-area: leftPlayerName;
+  align-self: center;
+  text-align: center;
+}
+.rightPlayerName {
+  grid-area: rightPlayerName;
+  align-self: center;
+  text-align: center;
+}
+.PandL {
+  grid-area: PandL;
+  align-self: center;
+  text-align: center;
+}
+.outIcon {
+  grid-area: outIcon;
+  align-self: end;
+  justify-self: start;
+}
+.inIcon {
+  grid-area: inIcon;
+  align-self: end;
+  justify-self: end;
+}
+
+.outIcon img {
+  margin: : 1.2em;
+}
+
+.inIcon img {
+  margin: : 1.2em;
+}
+
+.outMil {
+  grid-area: outMil;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.6em;
+}
+.inMil {
+  grid-area: inMil;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.6em;
+}
