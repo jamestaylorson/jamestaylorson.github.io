@@ -6,14 +6,49 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 10% 1fr 10%;
+  grid-template-rows: 8% 8% 1fr 10%;
   height: 100vh;
   grid-template-areas: "header""subHead""content""footer";
 }
 .header {
   grid-area: header;
-  background: #321F65;
+  background: rgb(50,31,101);
+  background: linear-gradient(128deg, rgba(50,31,101,1) 52%, rgba(233,0,82,1) 52%);
 }
+.headerText {
+  color: #fff;
+  padding-left: 1em;
+  margin-top: 0.8em;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.dateStyle {
+  font-weight: 500;
+}
+
+.dateHeader {
+  width: 100%;
+  height: auto;
+  background-color: #eee;
+  text-align: center;
+  font-size: 1.2em;
+  position: relative;
+  z-index: 1;
+}
+
+.dateHeader.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.dateHeader.fixed.absolute {
+  position: absolute;
+}
+
 .subHead {
   grid-area: subHead;
   background: #58448B;
@@ -33,7 +68,7 @@ body {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  margin: 3em 1em 3em 1em;
+  margin: 2em 0.4em 3em 0.4em;
   grid-template-areas: 
 
     "manager manager manager manager"

@@ -8,6 +8,7 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
 
             for (var i=0; i<entries.length; i++) {
 
+                var dh = document.createElement("div");dh.className = 'dateHeader';
                 var ngc = document.createElement("div");ngc.className = 'nested-grid-container';
                 var mgr = document.createElement("div");mgr.className = 'manager';
                 var lpi = document.createElement("div");lpi.className = 'leftPlayerImage';
@@ -21,6 +22,7 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
                 var im = document.createElement("div");im.className = 'inMil';
                 
 
+                dh.innerHTML = '<span class="dateStyle">' + entries[i].gsx$date.$t + '</span>';
                 mgr.innerHTML = entries[i].gsx$manager.$t;
                 lpi.innerHTML = '<img src=img/' + entries[i].gsx$outimage.$t + '.png>';
                 rpi.innerHTML = '<img src=img/' + entries[i].gsx$inimage.$t + '.png>';
@@ -32,6 +34,7 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
                 im.innerHTML = entries[i].gsx$buyvalue.$t + 'm';
                 om.innerHTML = entries[i].gsx$salevalue.$t + 'm';
 
+                mainContainer.insertBefore(dh, null);
                 mainContainer.appendChild(ngc);
                 ngc.appendChild(mgr);
                 ngc.appendChild(lpi);
