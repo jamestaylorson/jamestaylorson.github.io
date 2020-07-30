@@ -62,9 +62,10 @@ body {
  .nested-grid-container {
      display: grid;
      background: #fff;
+     border-radius: 5px;
      box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
      grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-rows: auto;
       margin: 1.5em 0.4em 1.5em 0.4em;
      padding: 1em 0;
      grid-template-areas: "manager manager manager manager" "leftPlayerImage outIcon inIcon rightPlayerImage" "leftPlayerImage outMil inMil rightPlayerImage" "leftPlayerName PandL PandL rightPlayerName";
@@ -180,6 +181,7 @@ body {
  .teams-grid-container {
      display: grid;
      background: #fff;
+     border-radius: 5px;
      box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
      margin: 2em 0.5em 3em 0.5em;
      padding: 2em 0;
