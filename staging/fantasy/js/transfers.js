@@ -5,7 +5,6 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
             var mainContainer = document.getElementById("content");
             
             var entries = data.feed.entry;
-            console.log(entries);
 
             for (var i=0; i<entries.length; i++) {
 
@@ -35,6 +34,10 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
                 im.innerHTML = entries[i].gsx$buyvalue.$t + 'm';
                 om.innerHTML = entries[i].gsx$salevalue.$t + 'm';
 
+                console.log(entries);
+                
+                // $.each(entries.reverse(),function(){
+
                 mainContainer.insertBefore(dh, null);
                 mainContainer.appendChild(ngc);
                 ngc.appendChild(mgr);
@@ -47,5 +50,6 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
                 ngc.appendChild(pl);
                 ngc.appendChild(om);
                 ngc.appendChild(im);
+                // });
     };
 });
