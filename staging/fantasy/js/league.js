@@ -1,4 +1,4 @@
-var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/4/public/values?alt=json';
+var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/3/public/values?alt=json';
 
 $.getJSON(url, function appendData(data) {
 
@@ -11,10 +11,10 @@ $.getJSON(url, function appendData(data) {
 
     var tableRow = document.createElement("tr");
 
-    var str = '<td>' + entries[i].gsx$position.$t + '</td><td>' + entries[i].gsx$team.$t + '</td><td class ="tableAlign">' + entries[i].gsx$weeklyscore.$t + '</td><td class ="tableAlign">' + entries[i].gsx$totals.$t + '</td>';
+    var str = '<td class ="tableAlign">' + entries[i].gsx$position.$t + '</td><td class ="leagueMoves"><i class="' + entries[i].gsx$_cokwr.$t + '"></i></td><td class ="nameAlign">' + entries[i].gsx$team.$t + '</td><td class ="tableAlign">' + entries[i].gsx$weeklyscore.$t + '</td><td class ="tableAlign">' + entries[i].gsx$totals.$t + '</td>';
     tableRow.innerHTML = str;
 
-    tableContent.appendChild(tableRow);
+    tableContent.appendChild(tableRow); 
 
   };
 });

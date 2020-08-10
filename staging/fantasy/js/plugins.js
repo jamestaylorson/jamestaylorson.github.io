@@ -22,3 +22,12 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+$(document).ready(function () {
+
+// Fade out cover screen on tap/click
+  $(".cover").click(function () {
+      $(".cover").fadeOut(500);
+    });
+});
+

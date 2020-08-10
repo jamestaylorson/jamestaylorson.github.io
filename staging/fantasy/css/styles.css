@@ -1,305 +1,760 @@
+html,
 body {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     background: #eee;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
- .grid-container {
-     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 8% 8% 1fr 10%;
-     height: 100vh;
-     grid-template-areas: "header""subHead""content""nav";
-}
- .grid-container-home {
-     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 8% 1fr 10%;
-     height: 100vh;
-     grid-template-areas: "header""content""nav";
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
- .header {
-     grid-area: header;
-     background: rgb(50,31,101);
-     background: linear-gradient(128deg, rgba(50,31,101,1) 52%, rgba(233,0,82,1) 52%);
-    align-self: center;
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
- .headerText {
-     color: #fff;
-     padding-left: 1em;
-     margin-top: 0.8em;
-     font-weight: 700;
-     line-height: 1.2em;
+body {
+  background: #eee;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+h1 {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0.1em 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+content {
+  grid-area: content;
+  width: 100%;
+  overflow: auto;
+  justify-self: center;
+}
+section {
+  min-height: 100%;
+  /*min-width: 100%;*/
+}
+footer {
+  grid-area: footer;
+  background: #321F65;
+  display: none;
+}
+
+/****** NAVBAR ******/
+
+nav {
+  grid-area: nav;
+  background: #321F65;
+  align-self: center;
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+}
+li img {
+  height: 7vh;
+  margin: 0;
+}
+nav.grid ul {
+  display: grid;
+  grid-template-columns: repeat(4, 0);
+  grid-gap: 25vw;
+  padding-inline-start: 0;
+  justify-content: center;
+  justify-items: center;
+}
+
+/****** COVER OVERLAY ******/
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-gap: 10px;
+}
+.cover {
+  background: linear-gradient(128deg, rgba(50, 31, 101, 1) 52%, rgba(233, 0, 82, 1) 52%);
+  z-index: 500;
+  position: fixed;
+}
+.cover img {
+  max-width: 80%;
+}
+
+/****** SCAFFOLD HEADER AND SUBHEADER ******/
+
+header {
+  grid-area: header;
+  background: rgb(50, 31, 101);
+  background: linear-gradient(128deg, rgba(50, 31, 101, 1) 52%, rgba(233, 0, 82, 1) 52%);
+}
+.subHeader {
+  grid-area: subHeader;
+  background: #58448B;
 }
 .logo {
-    height: 25px;
-    width: auto;
-    padding: 6%;
-}
- .dateStyle {
-     font-weight: 500;
-}
- .dateHeader {
-     width: 100%;
-     height: auto;
-     background-color: #eee;
-     text-align: center;
-     font-size: 1.2em;
-     position: relative;
-     z-index: 1;
-}
- .dateHeader.fixed {
-     position: fixed;
-     top: 0;
-     width: 100%;
-     box-sizing: border-box;
-     z-index: 0;
-}
- .dateHeader.fixed.absolute {
-     position: absolute;
-}
- .subHead {
-     grid-area: subHead;
-     background: #58448B;
-     color: #fff;
-     font-weight: 500;
-     font-size: 2em;
+  height: 50%;
 }
 
- #content {
-     grid-area: content;
-     overflow: auto;
+/****** ALL GRID CONTAINERS ******/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas: "header""content""nav";
+  height: 100vh;
+  width: 100vw;
 }
- 
-nav {
-    background: #321F65;
+.grid-container-sub {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% auto 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas: "header""subHeader""content""nav";
+  height: 100vh;
+  width: 100vw;
+}
+.grid-container-landing {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "gameweek""deadline";
+  height: 100%;
+  background: #321F65;
+}
+#grid-container-mom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "award winner""award winner""fun fun";
+  height: 100%;
+  background: #eee;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 5% 0 0 0;  
-    }
-
-nav.grid ul {
-    display: grid;
-    grid-template-columns: repeat(4, 60px);
-    grid-gap: 5vw;
-    justify-content: center;
-    justify-items: center;
+#grid-container-toppoints {
+  display: grid;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.15);
+  grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5em 0.5em;
+  color: #000;
+  margin: 1em 0.7em 1em 0.7em;
+  justify-items: center; 
+  align-items: center;
+  grid-template-areas: 
+    "topPointsTitle topPointsTitle topPointsTitle topPointsTitle" 
+    "image1 name1 points1 ffm1"
+    "image2 name2 points2 ffm2" 
+    "image3 name3 points3 ffm3" 
+    "image4 name4 points4 ffm4" 
+    "image5 name5 points5 ffm5";
 }
 
-li img {
-  height: 40px;
+#topPointsTitle { grid-area: topPointsTitle; font-size: 1.5em; align-self: end;}
+#topPointsTitle p { 
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#image5 { grid-area: image5; }
+#image1 { grid-area: image1; }
+#image2 { grid-area: image2; }
+#image3 { grid-area: image3; }
+#image4 { grid-area: image4; }
+#image5 { grid-area: image5; }
+#name1 { grid-area: name1; justify-self: start;}
+#name2 { grid-area: name2; justify-self: start;}
+#name3 { grid-area: name3; justify-self: start;}
+#name4 { grid-area: name4; justify-self: start;}
+#name5 { grid-area: name5; justify-self: start;}
+#points1 { grid-area: points1; }
+#points2 { grid-area: points2; }
+#points3 { grid-area: points3; }
+#points4 { grid-area: points4; }
+#points5 { grid-area: points5; }
+#ffm1 { grid-area: ffm1; font-size: 0.8em; text-align: center;}
+#ffm2 { grid-area: ffm2; font-size: 0.8em; text-align: center; }
+#ffm3 { grid-area: ffm3; font-size: 0.8em; text-align: center; }
+#ffm4 { grid-area: ffm4; font-size: 0.8em; text-align: center; }
+#ffm5 { grid-area: ffm5; font-size: 0.8em; text-align: center; }
+
+.tpImage img{
+  width: 13vw;
+}
+.tpheader p {
+  font-size: 0.7em;
+  font-weight: 900;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.grid-container-transfers {
+  display: grid;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.15);
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-rows: auto;
+  margin: 1.5em 0.8em;
+  padding: 1em 0;
+  grid-template-areas: "manager manager manager manager""leftPlayerImage outIcon inIcon rightPlayerImage""leftPlayerImage outMil inMil rightPlayerImage""leftPlayerName PandL PandL rightPlayerName";
+}
+.grid-container-teams {
+  display: grid;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.15);
+  margin: 1em 0.7em 1em 0.7em;
+  padding: 1em 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "manager""keeper""keeperName""defence""defenceName""midfield""midfieldName""forwards""forwardsName""benchHead""bench""benchName";
+}
+
+/****** HOME SECTION STYLES ******/
+
+/** info **/
+
+.gameweek {
+  grid-area: gameweek;
+  justify-self: center;
+  align-self: center;
+}
+.deadline {
+  grid-area: deadline;
+  justify-self: center;
+  align-self: start;
+}
+.gameweek h3,
+.deadline h3 {
+  color: #fff;
+  text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-weight: lighter;
+}
+.gameweek h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 6em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.deadline h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.gameweek p,
+.deadline p {
+  color: #fff;
+  text-align: center;
+  font-size: 0.8em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding: 4em 0;
+  font-weight: lighter;
+}
+
+/** MoM Award **/
+
+.award {
+  grid-area: award;
+}
+.award img {
+  height: 80%;
   width: auto;
+  object-fit: contain;
+}
+.winner {
+  grid-area: winner;
+  align-self: center;
+  padding: 1em;
+}
+.month {
+  color: #e90052;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+.momText {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.winnerText {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: bold;
+  background-color: #321F65;
+  padding: 0.5em;
+  width: fit-content;
+}
+.fun {
+  grid-area: fun;
 }
 
-/*@media (min-width: 600px) {
-  nav.grid ul {
-    grid-template-columns: repeat(4, 60px);
-    grid-gap: 20px;
-    justify-items: center;
-  }
+/** rules **/
+
+.rules {
+  padding: 2em;
+  min-width: 0;
+  color: #fff;
+  background: #321F65;
+}
+.rules h1{
+  color: #fff;
+}
+.centerMe {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/******** TRANSFER STYLES ********/
+
+.dateHeader {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  margin: 0.8em 0;
+}
+.dateHeader:not(:first-child) {
+  margin-top: 0.5em;
+}
+.dateHeader.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 0;
+}
+.dateHeader.fixed.absolute {
+  position: absolute;
+}
+#transfercontent {
+  grid-area: content;
+  margin: 0 auto;
+  overflow: auto;
+}
+#teamcontent {
+  grid-area: content;
+  margin: 0 auto;
+  overflow: auto;
+}
+#tpwrapper {
+margin: 0 auto;
+overflow: auto;
+width: 80%; 
+}
+.manager {
+  grid-area: manager;
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 0.7em;
+}
+.leftPlayerImage {
+  grid-area: leftPlayerImage;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightPlayerImage {
+  grid-area: rightPlayerImage;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftPlayerImage img {
+  width: 70%;
+}
+.rightPlayerImage img {
+  width: 70%;
+}
+.leftPlayerName {
+  grid-area: leftPlayerName;
+  align-self: start;
+  text-align: center;
+  padding-top: 0.6em;
+}
+.rightPlayerName {
+  grid-area: rightPlayerName;
+  align-self: start;
+  text-align: center;
+  padding-top: 0.6em;
+}
+.firstName {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.secondName {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.PandL {
+  grid-area: PandL;
+  align-self: center;
+  text-align: center;
+  font-size: 0.9em;
+}
+.outIcon {
+  grid-area: outIcon;
+  align-self: end;
+  justify-self: center;
+  /*display: flex;*/
+}
+.inIcon {
+  grid-area: inIcon;
+  align-self: end;
+  justify-self: center;
+  /*display: flex;*/
+}
+.outIcon img,
+.inIcon img {
+  width: 3em;
+}
+.outMil {
+  grid-area: outMil;
+  justify-self: center;
+  align-self: end;
+  font-size: 1.5em;
+}
+.inMil {
+  grid-area: inMil;
+  justify-self: center;
+  align-self: end;
+  font-size: 1.5em;
+}
+
+/******** LEAGUE TABLE STYLES ********/
+
+.tableStyle {
+  justify-self: center;
+  margin: 1.5em;
+  overflow: hidden;
+  height: 100%;
+}
+table,
+tbody,
+tr,
+td,
+th {
+  text-align: left;
+  border-collapse: collapse;
+}
+/*tr:nth-child(even) {
+  background-color: #f3f3f3;
 }*/
 
- .nested-grid-container {
-     display: grid;
-     background: #fff;
-     border-radius: 5px;
-     box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
-     grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-     grid-template-rows: auto;
-      margin: 1.5em 0.4em 1.5em 0.4em;
-     padding: 1em 0;
-     grid-template-areas: "manager manager manager manager" "leftPlayerImage outIcon inIcon rightPlayerImage" "leftPlayerImage outMil inMil rightPlayerImage" "leftPlayerName PandL PandL rightPlayerName";
-}
- .manager {
-     grid-area: manager;
-     text-align: center;
-     font-size: 2em;
-}
- .leftPlayerImage {
-     grid-area: leftPlayerImage;
-     align-self: end;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
- .rightPlayerImage {
-     grid-area: rightPlayerImage;
-     align-self: end;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
- .leftPlayerImage img{
-     width: 70%;
-}
- .rightPlayerImage img{
-     width: 70%;
-}
- .leftPlayerName {
-     grid-area: leftPlayerName;
-     align-self: start;
-     text-align: center;
-     padding-top: 0.6em;
-}
- .rightPlayerName {
-     grid-area: rightPlayerName;
-     align-self: start;
-     text-align: center;
-     padding-top: 0.6em;
-}
- .firstName {
-     font-weight: 300;
-     font-size: : 0.8em;
-}
- .secondName {
-     text-transform: uppercase;
-     font-weight: 700;
-     font-size: : 1.2em !important;
-}
- .PandL {
-     grid-area: PandL;
-     align-self: center;
-     text-align: center;
-}
- .outIcon {
-     grid-area: outIcon;
-     align-self: end;
-     justify-self: end;
-     display: flex;
-}
- .inIcon {
-     grid-area: inIcon;
-     align-self: end;
-     justify-self: start;
-     display: flex;
-}
- .outIcon img {
-     width: 70%;
-}
- .inIcon img {
-     width: 70%;
-}
- .outMil {
-     grid-area: outMil;
-     justify-self: center;
-     align-self: end;
-     font-size: 1.6em;
-}
- .inMil {
-     grid-area: inMil;
-     justify-self: center;
-     align-self: end;
-     font-size: 1.6em;
-}
- .tableStyle {
-     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 1fr;
-     justify-self: center;
-     align-self: start;
-     margin-top: 2em;
-}
- table, tbody, tr, td, th {
-    /*border: 1px solid black;
-    */
-     text-align: left;
-}
- th {
-     border-bottom: 1px solid #828282;
-}
- table {
-    width: 80vw;
-    height: 65vh;
-    border-spacing: 0;
-}
- td {
-     font-size: 1em;
-}
- .tableAlign {
-     text-align: center;
-}
- .teams-grid-container {
-     display: grid;
-     background: #fff;
-     border-radius: 5px;
-     box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
-     margin: 2em 0.5em 3em 0.5em;
-     padding: 2em 0;
-     grid-template-columns: 1fr;
-     grid-template-rows: auto;
-     grid-template-areas: "manager" "keeper" "keeperName" "defence" "defenceName" "midfield" "midfieldName" "forwards" "forwardsName" "bench" "benchName";
-}
- 
-.manager {grid-area: manager;}
-.keeper {grid-area: keeper;}
-.keeperName {grid-area: keeperName;}
-.defence {grid-area: defence;}
-.defenceName {grid-area: defenceName;}
-.midfield {grid-area: midfield;}
-.midfieldName {grid-area: midfieldName;}
-.forwards {grid-area: forwards;}
-.forwardsName {grid-area: forwardsName;}
-.bench {grid-area: bench; background: #eee;}
-.benchName {grid-area: benchName; background: #eee;}
-
- .keeper img, .defence img, .midfield img, .forwards img, .bench img {
-     width: 15vw;
-}
- .keeper div, .defence div, .midfield div, .forwards div, .bench div {
-     display: inline-block;
-     width: 15vw;
-}
-
- .keeperName div, .defenceName div, .midfieldName div, .forwardsName div, .benchName div {
-     display: inline-block;
-     width: 15vw;
-     font-size: auto;
-     text-align: center;
-     font-weight: 500;
-     font-size: 0.6em;
-}
-
- .keeperName p, .defenceName p, .midfieldName p, .forwardsName p, .benchName p {
-     margin: 0; 
-}
-
- .keeper, .defence, .midfield, .forwards, .bench {
-    justify-self: center;
-    align-self: end;
-}
-
- .keeperName, .defenceName, .midfieldName, .forwardsName, .benchName {
-    justify-self: center;
-    align-self: center;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    align-self: start;
-}
-
-/* .bench {
-    padding: 1em 0;
+/*tr:nth-child(odd) {
+  background-color: #f3f3f3;
 }*/
+tr:nth-child(1) {
+  background-color: #321F65;
+  color: #fff;
+}
 
-.player, .name {
+tr {
+  border-top: 1px solid #d8d8d8;
+  background-color: #fff;
+}
+
+th {
+  border-bottom: 1px solid #828282;
+}
+table {
+  width: 90vw;
+  height: 90%;
+  border-spacing: 0;
+}
+td {
+  font-size: 1em;
+}
+.tableAlign {
+  text-align: center;
+}
+
+.nameAlign {
+  padding-left: 5px;
+}
+
+/******** TEAM STYLES ********/
+
+.manager {
+  grid-area: manager;
+}
+.keeper {
+  grid-area: keeper;
+}
+.keeperName {
+  grid-area: keeperName;
+}
+.defence {
+  grid-area: defence;
+}
+.defenceName {
+  grid-area: defenceName;
+}
+.midfield {
+  grid-area: midfield;
+}
+.midfieldName {
+  grid-area: midfieldName;
+}
+.forwards {
+  grid-area: forwards;
+}
+.forwardsName {
+  grid-area: forwardsName;
+}
+.benchHead {
+  grid-area: benchHead;
+  width: 70%;
+}
+.bench {
+  grid-area: bench;
+}
+.benchName {
+  grid-area: benchName;
+}
+.keeper img,
+.defence img,
+.midfield img,
+.forwards img,
+.bench img {
+  width: 15vw;
+}
+.keeper div,
+.defence div,
+.midfield div,
+.forwards div,
+.bench div {
+  display: inline-block;
+  width: 15vw;
+}
+.keeperName div,
+.defenceName div,
+.midfieldName div,
+.forwardsName div,
+.benchName div,
+.benchHead div {
+  display: inline-block;
+  width: 15vw;
+  font-size: auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.7em;
+}
+.keeperName p,
+.defenceName p,
+.midfieldName p,
+.forwardsName p,
+.benchName p,
+.benchHead p {
+  margin: 0;
+}
+.keeper,
+.defence,
+.midfield,
+.forwards,
+.bench,
+.benchHead {
+  justify-self: center;
+  align-self: end;
+}
+.keeperName,
+.defenceName,
+.midfieldName,
+.forwardsName,
+.benchName {
+  justify-self: center;
+  align-self: start;
+  padding-top: 0.2em;
+  padding-bottom: 1em;
+  display: flex;
+}
+.bench {
+  padding-top: 0.6em;
+}
+.benchHead p {
+  font-size: 1em;
+  font-weight: 700;
+  color: #000;
+  padding: 0.5em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  border-bottom: 1px dashed #ddd;
+  white-space: nowrap;
+  text-align: center;
+}
+.player,
+.name {
   margin: 0 6px;
 }
 
-.homeContainer {
-    height: 100%;
-    width: 100%;
-}
-.purple {
-    background: #321F65;
-}
-.grey {
-    background: #eee;
+/******** DESKTOP STYLES ********/
+
+@media (min-width: 600px) {
+.outIcon img, .inIcon img {
+    width: 4em;
+  }
+.inMil, .outMil {
+  align-self: center;
+  font-size: 2.5em;
+  }
+  .keeperName div, .defenceName div, .midfieldName div, .forwardsName div, .benchName div, .benchHead div {
+    font-size: 1em;
+  }
 }
 
-/*Sets viewport to 100% without address bar*/
-.viewportsize {
+@media (min-width: 800px) {
+  #transfercontent {
+    width: 80%;
+  }
+  #teamcontent {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid-container {
+    grid-template-rows: 10% auto 1fr 5%;
+    grid-template-areas: "header""nav""content""footer";
+  }
+  .grid-container-sub {
+    grid-template-rows: 10% auto auto 1fr 5%;
+    grid-template-areas: "header""nav""subHeader""content""footer";
+  }
+  nav {
+    background: #58448B;
+  }
+  .subHeader {
+    background: #321F65;
+  }
+  #grid-container-mom {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "award winner";
+  }
+  #teamcontent {
+    width: 90%;
+  }
+  #transfercontent {
+    width: 60%;
+  }
+  .award {
+    justify-self: end;
+    padding: 0 4em;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+  nav.grid ul {
+    grid-gap: 15vw;
+  }
+  li img {
+    height: 5vh;
+  }
+  
+  footer {
+    grid-area: footer;
+    background: #58448B;
+    display: block;
+  }
+  .rules p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+  }
+}
+
+/******** END DESKTOP STYLES ********/
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-rtl {
+  direction: rtl;
+}
+.countdown-row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center;
+}
+/*.countdown-show1 .countdown-section {
+  width: 98%;
+}
+.countdown-show2 .countdown-section {
+  width: 48%;
+}
+.countdown-show3 .countdown-section {
+  width: 32.5%;
+}*/
+/*.countdown-show4 .countdown-section {
+  width: 24.5%;
+}
+.countdown-show5 .countdown-section {
+  width: 19.5%;
+}
+.countdown-show6 .countdown-section {
+  width: 16.25%;
+}
+.countdown-show7 .countdown-section {
+  width: 14%;
+}*/
+.countdown-section {
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 0.5em;
+}
+.countdown-amount {
+    font-size: 200%;
+}
+.countdown-period {
+    display: block;
+    font-size: 50%;
+}
+.countdown-descr {
+  display: block;
+  width: 100%;
+}
+
+.leagueMoves {
+    color: #ddd;
+    font-size: 0.7em;
+    text-align: left;
+}
+
+ .fa-angle-up {
+    color: green;
+  }
+
+  .fa-angle-down {
+    color: red;
+  }
+
+.viewportfix {
+  height: 100%;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
