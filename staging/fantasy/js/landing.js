@@ -1,6 +1,6 @@
-var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/7/public/values?alt=json';
+var url1 = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/7/public/values?alt=json';
         
-        $.getJSON(url,function appendData(data){
+        $.getJSON(url1,function appendData(data){
 
             
             var gw = data.feed.entry[0].gsx$gameweek.$t;
@@ -10,9 +10,13 @@ var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afI
             var h = data.feed.entry[0].gsx$hour.$t;
             var min = data.feed.entry[0].gsx$min.$t;
             var dyd = data.feed.entry[0].gsx$nexttransferwindow.$t;
+            var led = data.feed.entry[0].gsx$leader.$t;
             
             var gwv = document.getElementById("gameweekDynamic");
             gwv.innerHTML = gw;
+
+            var ldy = document.getElementById("leaderDynamic");
+            ldy.innerHTML = led;
 
             var dd = document.getElementById("deadlineDynamic");
             dd.innerHTML = "(" + dyd + " at 10am GMT)";

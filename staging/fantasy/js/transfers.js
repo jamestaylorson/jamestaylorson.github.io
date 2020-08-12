@@ -1,6 +1,6 @@
-var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/od6/public/values?alt=json';
+var url4 = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/od6/public/values?alt=json';
         
-        $.getJSON(url,function appendData(data){
+        $.getJSON(url4,function appendData(data){
 
             var mainContainer = document.getElementById("transfercontent");
             

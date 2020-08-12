@@ -7,18 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="robots" content="noindex">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+  <meta name="og:url" content="">
+  <meta name="og:title" content="FF20">
+  <meta name="og:type" content="website">
+  <meta name="og:description" content="Fantasy Football 2020">
+  <meta name="og:image" content="">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#321f65">
+  <meta name="msapplication-TileColor" content="#321f65">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#321f65">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -32,13 +36,14 @@
 <body>
 <script>document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);</script>
 
-<div class="grid-container-sub viewportfix">
+<div class="viewportfix">
   
   <header><a href="_index.html"><img src="img/logo.svg" class="centerMe logo" /></a></header>
+
   <div class="subHeader"><h1>League</h1></div>
   
 <!-- MAIN CONTENT -->
-  
+  <main class="league">
         <div class="tableStyle">
            <table>
             <tbody id="tablecontent">
@@ -52,19 +57,18 @@
             </tbody> 
           </table>
     </div>
-
+</main>
 <!-- END MAIN CONTENT -->
   
-  <nav class="grid">
+  <nav class="navstyle">
         <ul>
           <li><a href="_index.html"><img src="img/navHome.svg"/></a></li>
           <li><a href="transfers.html"><img src="img/navTransfers.svg"/></a></li>
           <li><a href="teams.html"><img src="img/navTeams.svg"/></a></li>
           <li><a href="#"><img src="img/navLeagueSLC.svg"/></a></li>
         </ul>
-   </nav>
+</nav>
   
-  <footer></footer>
 
 </div>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>

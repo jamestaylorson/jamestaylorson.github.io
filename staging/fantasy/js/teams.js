@@ -1,6 +1,6 @@
-var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/4/public/values?alt=json';
+var url5 = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/4/public/values?alt=json';
         
-        $.getJSON(url,function appendData(data){
+        $.getJSON(url5,function appendData(data){
 
             var mainContainer = document.getElementById("teamcontent");
             

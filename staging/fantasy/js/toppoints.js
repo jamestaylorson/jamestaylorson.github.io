@@ -1,6 +1,31 @@
-var url = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruvbNK_ymZFXi7tjIeCclc/3/public/values?alt=json';
+var url3 = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruvbNK_ymZFXi7tjIeCclc/3/public/values?alt=json';
         
-        $.getJSON(url,function appendData(data){
+        $.getJSON(url3,function appendData(data){
+
+        var entries = data.feed.entry;
+            console.log(entries);       
+
+            for (var i=0; i<entries.length; i++) {
+                  
+                  var n = entries[i].content.$t;
+                  let t =[];
+                  t.push(n);
+                  let s =[];
+                  s.push(t);
+                  console.log(s);
+
+                  // function sortByKey(array, key) {
+                  //       return array.sort(function(a, b) {
+                  //           var x = a[key]; var y = b[key];
+                  //           return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+                  //       });
+                  // }
+
+                  // y = sortByKey(t, 'points');
+
+                  //       console.log(y);
+
+            };
 
             var pointsTitle = document.getElementById("pointsScorerTitle");
             var image1 = document.getElementById("image1");
@@ -33,11 +58,11 @@ var url = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruvb
             var ir4 = data.feed.entry[3].gsx$imageref.$t;
             var ir5 = data.feed.entry[4].gsx$imageref.$t;
 
-            var pn1 = data.feed.entry[0].gsx$playername.$t;
-            var pn2 = data.feed.entry[1].gsx$playername.$t;
-            var pn3 = data.feed.entry[2].gsx$playername.$t;
-            var pn4 = data.feed.entry[3].gsx$playername.$t;
-            var pn5 = data.feed.entry[4].gsx$playername.$t;
+            var pn1 = data.feed.entry[0].gsx$fullname.$t;
+            var pn2 = data.feed.entry[1].gsx$fullname.$t;
+            var pn3 = data.feed.entry[2].gsx$fullname.$t;
+            var pn4 = data.feed.entry[3].gsx$fullname.$t;
+            var pn5 = data.feed.entry[4].gsx$fullname.$t;
 
             var pts1 = data.feed.entry[0].gsx$points.$t;
             var pts2 = data.feed.entry[1].gsx$points.$t;
@@ -45,7 +70,7 @@ var url = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruvb
             var pts4 = data.feed.entry[3].gsx$points.$t;
             var pts5 = data.feed.entry[4].gsx$points.$t;
 
-            topPointsTitle.innerHTML = '<p>Top Points</p>';
+            topPointsTitle.innerHTML = '<p>Top Points Scorers</p>';
             image1.innerHTML = '<img data-sizes="auto" data-src="img/' + ir1 + '_xsml.png" data-srcset="img/' + ir1 + '_sml.png 300w, img/' + ir1 + '_med.png 400w, img/' + ir1 + '_lrg.png 500w" class="lazyload">';
             name1.innerHTML = pn1;
             points1.innerHTML = pts1 + " pts";
