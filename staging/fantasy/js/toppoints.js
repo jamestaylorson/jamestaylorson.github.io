@@ -1,31 +1,13 @@
-var url3 = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruvbNK_ymZFXi7tjIeCclc/3/public/values?alt=json';
+var url3 = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruvbNK_ymZFXi7tjIeCclc/1/public/values?alt=json';
         
         $.getJSON(url3,function appendData(data){
 
-        var entries = data.feed.entry;
-            console.log(entries);       
+        // var entries = data.feed.entry;
+        //     console.log(entries);       
 
-            for (var i=0; i<entries.length; i++) {
-                  
-                  var n = entries[i].content.$t;
-                  let t =[];
-                  t.push(n);
-                  let s =[];
-                  s.push(t);
-                  console.log(s);
+        //     for (var i=0; i<entries.length; i++) {
 
-                  // function sortByKey(array, key) {
-                  //       return array.sort(function(a, b) {
-                  //           var x = a[key]; var y = b[key];
-                  //           return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-                  //       });
-                  // }
-
-                  // y = sortByKey(t, 'points');
-
-                  //       console.log(y);
-
-            };
+        //     };
 
             var pointsTitle = document.getElementById("pointsScorerTitle");
             var image1 = document.getElementById("image1");
@@ -52,17 +34,17 @@ var url3 = 'https://spreadsheets.google.com/feeds/list/1O213s-JsDtRxLEg3uKb3sruv
             var ffm4 = document.getElementById("ffm4");
             var ffm5 = document.getElementById("ffm5");
 
-            var ir1 = data.feed.entry[0].gsx$imageref.$t;
-            var ir2 = data.feed.entry[1].gsx$imageref.$t;
-            var ir3 = data.feed.entry[2].gsx$imageref.$t;
-            var ir4 = data.feed.entry[3].gsx$imageref.$t;
-            var ir5 = data.feed.entry[4].gsx$imageref.$t;
+            var ir1 = data.feed.entry[0].gsx$imageid.$t;
+            var ir2 = data.feed.entry[1].gsx$imageid.$t;
+            var ir3 = data.feed.entry[2].gsx$imageid.$t;
+            var ir4 = data.feed.entry[3].gsx$imageid.$t;
+            var ir5 = data.feed.entry[4].gsx$imageid.$t;
 
-            var pn1 = data.feed.entry[0].gsx$fullname.$t;
-            var pn2 = data.feed.entry[1].gsx$fullname.$t;
-            var pn3 = data.feed.entry[2].gsx$fullname.$t;
-            var pn4 = data.feed.entry[3].gsx$fullname.$t;
-            var pn5 = data.feed.entry[4].gsx$fullname.$t;
+            var pn1 = data.feed.entry[0].gsx$playerfullname.$t;
+            var pn2 = data.feed.entry[1].gsx$playerfullname.$t;
+            var pn3 = data.feed.entry[2].gsx$playerfullname.$t;
+            var pn4 = data.feed.entry[3].gsx$playerfullname.$t;
+            var pn5 = data.feed.entry[4].gsx$playerfullname.$t;
 
             var pts1 = data.feed.entry[0].gsx$points.$t;
             var pts2 = data.feed.entry[1].gsx$points.$t;

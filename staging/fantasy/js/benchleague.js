@@ -11,7 +11,7 @@ $.getJSON(url6, function appendData(data) {
 
     var tableRow = document.createElement("tr");
 
-    var str = '<td class ="tableAlign">' + entries[i].gsx$position.$t + '</td><td class ="leagueMoves"><i class="' + entries[i].gsx$_cokwr.$t + '"></i></td><td class ="nameAlign">' + entries[i].gsx$team.$t + '</td><td class ="tableAlign">' + entries[i].gsx$weeklyscore.$t + '</td><td class ="tableAlign">' + entries[i].gsx$totals.$t + '</td>';
+    var str = '<td class ="tableAlign">' + entries[i].gsx$position_2.$t + '</td><td class ="leagueMoves"><i class="' + entries[i].gsx$_clrrx.$t + '"></i></td><td class ="nameAlign">' + entries[i].gsx$team_2.$t + '</td><td class ="tableAlign">' + entries[i].gsx$weeklyscore_2.$t + '</td><td class ="tableAlign">' + entries[i].gsx$totals_2.$t + '</td>';
     tableRow.innerHTML = str;
 
     tableContent.appendChild(tableRow); 

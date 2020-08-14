@@ -1,82 +1,79 @@
+* {
+  font-family:'Mulish',sans-serif;
+  font-weight:300;
+}
+
 html,body {
   height:100%;
   -webkit-overflow-scrolling:touch;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
   -webkit-tap-highlight-color:transparent;
   touch-action:manipulation;
-}
-::-moz-selection {
-  background:#b3d4fc;
-  text-shadow:none;
-}
-::selection {
-  background:#b3d4fc;
-  text-shadow:none;
-}
-body {
   background:#eee;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
+  
 }
 h1 {
-  color:#fff;
-  font-size:1.5em;
-  text-align:center;
-  margin:0.1em 0;
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0.2em 0;
+  font-weight: 500;
+  text-transform: uppercase;
 }
-::-webkit-scrollbar {
-  display:none;
+h2 {
+  font-weight: 700;
 }
-/****** SCAFFOLD HEADER AND SUBHEADER ******/
+/****** MAIN SCAFFOLD ******/
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 10vh;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:10vh;
   background:linear-gradient(128deg,rgba(50,31,101,1) 52%,rgba(233,0,82,1) 52%);
-  z-index: 10;
+  z-index:10;
 }
 .subHeader {
-  position: fixed;
-  top: 10vh;
-  width: 100%;
-  height: 5vh;
+  position:fixed;
+  top:10vh;
+  width:100%;
+  height: fit-content;
   background:#58448B;
-  z-index: 10;
+  z-index:5;
 }
 .logo {
-  height: 50%;
+  height: 45%;
 }
-
+.centerMe {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
 main {
   width:100%;
   overflow:auto;
-  padding-top: 10vh;
+  padding-top:10vh;
 }
-
 main.sub {
-  padding-top: 15vh;
+  padding-top:15vh;
 }
 main.league {
-  padding-top: 15vh;
-  height: 80%;
+  padding-top:15vh;
+  height:80%;
 }
 section {
   min-height:80vh;
-  /*min-width:100%;*/
 }
-/****** NAVBAR ******/
 .navstyle {
   background:#321F65;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position:fixed;
+  bottom:0;
+  width:100%;
 }
-
 #navbar {
-  transition: bottom 0.3s;
-  position: fixed;
-  bottom: 0;
+  transition:bottom 0.3s;
+  position:fixed;
+  bottom:0;
 }
 .navstyle ul {
   display:grid;
@@ -84,16 +81,16 @@ section {
   grid-gap:25vw;
   padding-inline-start:0;
   justify-content:center;
-  justify-items: center;
+  justify-items:center;
 }
 ul {
   list-style-type:none;
 }
 li img {
   height:7vh;
-  margin:0;
+  margin: 0;
 }
-
+/****** END NAVBAR ******/
 /****** COVER OVERLAY ******/
 .container {
   height:100vh;
@@ -110,15 +107,6 @@ li img {
   max-width: 80%;
 }
 /****** ALL GRID CONTAINERS ******/
-.grid-container {
-  display:grid;
-  grid-template-columns:1fr;
-  grid-template-rows:10% 1fr 11%;
-  gap:0px 0px;
-  grid-template-areas:"header""content""nav";
-  height:100vh;
-  width:100vw;
-}
 .grid-container-sub {
   display:grid;
   grid-template-columns:1fr;
@@ -156,82 +144,10 @@ li img {
   gap:0.5em 0.5em;
   color:#000;
   margin:1em 0.7em 1em 0.7em;
-  padding: 1em;
+  padding:1em;
   justify-items:center;
   align-items:center;
   grid-template-areas:"topPointsTitle topPointsTitle topPointsTitle topPointsTitle" "image1 name1 points1 ffm1" "image2 name2 points2 ffm2" "image3 name3 points3 ffm3" "image4 name4 points4 ffm4" "image5 name5 points5 ffm5";
-}
-#topPointsTitle {
-  grid-area:topPointsTitle;
-  font-size:1.5em;
-  align-self:end;
-}
-#topPointsTitle p {
-  margin-block-start:0;
-  margin-block-end:0;
-}
-#image5 {
-  grid-area:image5;
-}
-#image1 {
-  grid-area:image1;
-}
-#image2 {
-  grid-area:image2;
-}
-#image3 {
-  grid-area:image3;
-}
-#image4 {
-  grid-area:image4;
-}
-#image5 {
-  grid-area:image5;
-}
-#name1 {
-  grid-area:name1;
-  justify-self:start;
-}
-#name2 {
-  grid-area:name2;
-  justify-self:start;
-}
-#name3 {
-  grid-area:name3;
-  justify-self:start;
-}
-#name4 {
-  grid-area:name4;
-  justify-self:start;
-}
-#name5 {
-  grid-area:name5;
-  justify-self:start;
-}
-#points1 {grid-area:points1;}
-#points2 {grid-area:points2;}
-#points3 {grid-area:points3;}
-#points4 {grid-area:points4;}
-#points5 {grid-area:points5;}
-
-#points1, #points2, #points3, #points4, #points5 {
-    font-size: 1em;
-    font-weight: 500;
-}
-
-#ffm1 {grid-area:ffm1;}
-#ffm2 {grid-area:ffm2;}
-#ffm3 {grid-area:ffm3;}
-#ffm4 {grid-area:ffm4;}
-#ffm5 {grid-area:ffm5;}
-
-#ffm1, #ffm2, #ffm3, #ffm4, #ffm5 {
-    font-size: 0.8em;
-    text-align: center;
-    padding: 0.5em;
-}
-.tpImage img {
-  width:13vw;
 }
 .grid-container-transfers {
   display:grid;
@@ -255,71 +171,120 @@ li img {
   grid-template-rows:auto;
   grid-template-areas: "manager""keeper""keeperName""defence""defenceName""midfield""midfieldName""forwards""forwardsName""benchHead""bench""benchName";
 }
-/****** HOME SECTION STYLES ******/
-/** info **/
-.gameweek {
-  grid-area:gameweek;
-  justify-self:center;
-  align-self:start;
-  padding-top: 10vh;
+#topPointsTitle {
+  grid-area:topPointsTitle;
+  font-size:1.5em;
+  align-self:end;
 }
-.leader {
-  grid-area:leader;
+#topPointsTitle p {
+  margin-block-start:0;
+  margin-block-end:0;
+}
+#image5 {grid-area:image5;}
+#image1 {grid-area:image1;}
+#image2 {grid-area:image2;}
+#image3 {grid-area:image3;}
+#image4 {grid-area:image4;}
+#image5 {grid-area:image5;}
+#name1 {grid-area:name1;justify-self:start;}
+#name2 {grid-area:name2;justify-self:start;}
+#name3 {grid-area:name3;justify-self:start;}
+#name4 {grid-area:name4;justify-self:start;}
+#name5 {grid-area:name5;justify-self:start;}
+#points1 {grid-area:points1;}
+#points2 {grid-area:points2;}
+#points3 {grid-area:points3;}
+#points4 {grid-area:points4;}
+#points5 {grid-area:points5;}
+#ffm1 {grid-area:ffm1;}
+#ffm2 {grid-area:ffm2;}
+#ffm3 {grid-area:ffm3;}
+#ffm4 {grid-area:ffm4;}
+#ffm5 {grid-area:ffm5;}
+
+#name1,#name2,#name3,#name4,#name5 {
+    font-size:0.8em;
+  }
+
+#points1,#points2,#points3,#points4,#points5 {
+  font-size:1em;
+  font-weight:500;
+}
+#ffm1,#ffm2,#ffm3,#ffm4,#ffm5 {
+  font-size:0.8em;
+  text-align:center;
+  padding:0.5em;
+}
+.tpImage img {
+  width:13vw;
+}
+/****** HOME SECTION STYLES ******/
+.gameweek {grid-area:gameweek;}
+.leader {grid-area:leader;}
+
+.gameweek, .leader {
   justify-self:center;
   align-self:start;
-  padding-top: 10vh;
+  padding-top:15vh;
 }
 .deadline {
   grid-area:deadline;
   justify-self:center;
   align-self:start;
 }
-.gameweek h3, .leader h3, .deadline h3 {
+.gameweek h3,.leader h3,.deadline h3 {
   color:#9285b5;
   text-align:center;
   margin-block-start:0em;
   margin-block-end:0em;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.9em;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:0.9em;
+}
+.gameweek h2, .leader h2, .deadline h2, .deadline p {
+  color:#fff;
+  text-align:center;
+  margin-block-start:0em;
+  margin-block-end:0em;
 }
 .gameweek h2 {
-  color:#fff;
-  text-align:center;
   font-size:6em;
-  margin-block-start:0em;
-  margin-block-end:0em;
 }
 .leader h2 {
-  color:#fff;
-  text-align:center;
   font-size:3em;
-  margin-block-start:0em;
-  margin-block-end:0em;
-  padding-top: 0.5em;
+  padding-top:0.5em;
 }
 .deadline h2 {
-  color:#fff;
-  text-align:center;
-  font-size: 1.2em;
+  font-size:1.2em;
+  margin: 0.5em 0;
 }
 .deadline p {
-  color:#fff;
-  text-align:center;
   font-size:0.8em;
-  margin-block-start:0em;
-  margin-block-end:0em;
-  padding:4em 0;
+  margin: 8em 0;
   font-weight: 300;
+}
+.countdown-section {
+  display:block;
+  float:left;
+  text-align:center;
+  padding:0.5em;
+}
+.countdown-amount {
+  font-size:200%;
+  font-weight: 700;
+}
+.countdown-period {
+  display:block;
+  font-size:50%;
 }
 /** MoM Award **/
 .award {
   grid-area:award;
-  justify-items: center;
-  align-items: center;
+  align-self:center;
+  justify-self:center;
 }
 .award img {
-  height: 40vh;
+  height:40vh;
   width:auto;
   object-fit:contain;
 }
@@ -329,44 +294,61 @@ li img {
   padding:1em;
 }
 .month {
-  color: #e90052;
-  font-size: 1.8em;
-  font-weight: bold;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  text-transform: uppercase;
+  color:#e90052;
+  font-size:1.8em;
+  font-weight:bold;
+  margin-block-start:0.5em;
+  margin-block-end:0.5em;
+  text-transform:uppercase;
 }
 .momText {
   font-size:1.2em;
-  font-weight:bold;
+  font-weight:700;
 }
 .winnerText {
-  font-size:1.5em;
+  font-size:2em;
   color:#fff;
-  font-weight:bold;
+  font-weight:700;
   background-color:#321F65;
   padding:0.5em;
   width:fit-content;
 }
-.fun {
-  grid-area: fun;
+.fun {grid-area: fun;}
+
+/******** RULES ********/
+
+.rulesContainer {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding:0;
 }
-/** rules **/
+
 .rules {
-  padding:2em;
-  min-width:0;
-  color:#fff;
-  background:#321F65;
+  padding: 2em;
+  background: #321F65;
+  color: #fff;
+  position: relative;
 }
-.rules h1 {
-  color:#fff;
+
+.rules h3, h4 {
+  font-weight: 700;
 }
-.centerMe {
-  position:relative;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+
+.rules ol {
+  list-style: none;
+  counter-reset: my-counter;
+  padding: 0;
+  margin: 0 1em;
 }
+.rules ol li {
+  counter-increment: my-counter;
+}
+.rules ol li::before {
+  content: counter(my-counter) ". ";
+  color: #9285b5;
+  font-weight: bold;
+}
+
 /******** TRANSFER STYLES ********/
 .dateHeader {
   width:100%;
@@ -379,12 +361,7 @@ li img {
 .dateHeader:not(:first-child) {
   margin-top:0.5em;
 }
-#transfercontent {
-  grid-area:content;
-  margin:0 auto;
-  overflow:auto;
-}
-#teamcontent {
+#transfercontent, #teamcontent {
   grid-area:content;
   margin:0 auto;
   overflow:auto;
@@ -395,34 +372,26 @@ li img {
   font-size:2em;
   padding-bottom:0.7em;
 }
-.leftPlayerImage {
-  grid-area:leftPlayerImage;
+
+.rightPlayerImage {grid-area:rightPlayerImage;}
+.leftPlayerImage {grid-area:leftPlayerImage;}
+.rightPlayerName {grid-area:rightPlayerName;}
+.leftPlayerName {grid-area:leftPlayerName;}
+.inIcon {grid-area:inIcon;}
+.outIcon {grid-area:outIcon;}
+.inMil {grid-area:inMil;}
+.outMil {grid-area:outMil;}
+
+.leftPlayerImage, .rightPlayerImage {
   align-self:end;
   display:flex;
   justify-content:center;
   align-items:center;
 }
-.rightPlayerImage {
-  grid-area:rightPlayerImage;
-  align-self:end;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.leftPlayerImage img {
+.leftPlayerImage img, .rightPlayerImage img {
   width:70%;
 }
-.rightPlayerImage img {
-  width:70%;
-}
-.leftPlayerName {
-  grid-area:leftPlayerName;
-  align-self:start;
-  text-align:center;
-  padding-top:0.6em;
-}
-.rightPlayerName {
-  grid-area:rightPlayerName;
+.leftPlayerName, .rightPlayerName {
   align-self:start;
   text-align:center;
   padding-top:0.6em;
@@ -442,104 +411,38 @@ li img {
   text-align:center;
   font-size:0.9em;
 }
-.outIcon {
-  grid-area:outIcon;
+.outIcon, .inIcon {
   align-self:end;
   justify-self:center;
-  /*display:flex;*/
 }
-.inIcon {
-  grid-area:inIcon;
-  align-self:end;
-  justify-self:center;
-  /*display:flex;*/
-}
+
 .outIcon img,.inIcon img {
   width:3em;
 }
-.outMil {
-  grid-area:outMil;
+.outMil, .inMil {
   justify-self:center;
   align-self:end;
   font-size:1.5em;
 }
-.inMil {
-  grid-area:inMil;
-  justify-self:center;
-  align-self:end;
-  font-size: 1.5em;
-}
-/******** LEAGUE TABLE STYLES ********/
-.tableStyle {
-  margin: 3vh;
-  height: 80%;
-}
-table {
-  width: 100%;
-  height: 100%;
-  border-spacing:0;
-}
-table,tbody,tr,td,th {
-  text-align:left;
-  border-collapse:collapse;
-}
-tr:nth-child(1) {
-  background-color:#321F65;
-  color:#fff;
-}
-tr {
-  border-top:1px solid #d8d8d8;
-  background-color:#fff;
-}
-th {
-  border-bottom:1px solid #828282;
-}
-td {
-  font-size:1em;
-}
-.tableAlign {
-  text-align:center;
-}
-.nameAlign {
-  padding-left: 5px;
-}
 /******** TEAM STYLES ********/
-.manager {
-  grid-area:manager;
-}
-.keeper {
-  grid-area:keeper;
-}
-.keeperName {
-  grid-area:keeperName;
-}
-.defence {
-  grid-area:defence;
-}
-.defenceName {
-  grid-area:defenceName;
-}
-.midfield {
-  grid-area:midfield;
-}
-.midfieldName {
-  grid-area:midfieldName;
-}
-.forwards {
-  grid-area:forwards;
-}
-.forwardsName {
-  grid-area:forwardsName;
+.manager {grid-area:manager;}
+.keeper {grid-area:keeper;}
+.keeperName {grid-area:keeperName;}
+.defence {grid-area:defence;}
+.defenceName {grid-area:defenceName;}
+.midfield {grid-area:midfield;}
+.midfieldName {grid-area:midfieldName;}
+.forwards {grid-area:forwards;}
+.forwardsName {grid-area:forwardsName;}
+.benchName {grid-area:benchName;}
+.bench {
+  grid-area:bench; 
+  padding-top:0.6em;
 }
 .benchHead {
   grid-area:benchHead;
   width:70%;
-}
-.bench {
-  grid-area:bench;
-}
-.benchName {
-  grid-area:benchName;
+  padding-bottom: : 1em;
 }
 .keeper img,.defence img,.midfield img,.forwards img,.bench img {
   width:15vw;
@@ -570,9 +473,6 @@ td {
   padding-bottom:1em;
   display:flex;
 }
-.bench {
-  padding-top:0.6em;
-}
 .benchHead p {
   font-size:1em;
   font-weight:700;
@@ -587,8 +487,74 @@ td {
 .player,.name {
   margin: 0 6px;
 }
+/******** LEAGUE TABLE STYLES ********/
+.tableStyle {
+  margin:3vh;
+  height:80%;
+}
+table {
+  width:100%;
+  height:100%;
+  border-spacing:0;
+}
+th {
+  border:none;
+}
+table,tbody,tr,td,th {
+  text-align:left;
+  border-collapse:collapse;
+}
+tr:nth-child(1) {
+  background-color:#321F65;
+  color:#fff;
+}
+tr {
+  border-top:1px solid #d8d8d8;
+  background-color:#fff;
+}
+td {
+  font-size:1em;
+}
+.tableAlign {
+  text-align:center;
+  padding: 0;
+}
+.nameAlign {
+  padding: 0;
+  padding-left: 0.8em;
+}
+.ctNameAlign {
+  padding-left: 1em;
+}
+.ctCashAlign {
+  padding-left: 2em;
+}
+.leagueMoves {
+  font-size:0.8em;
+}
+.fa-angle-up {
+  color:green;
+}
+.fa-angle-down {
+  color:red;
+}
+
 /******** DESKTOP STYLES ********/
 @media (min-width:600px) {
+  nav.navstyle ul {
+    grid-gap:15vw;
+  }
+  #grid-container-mom {
+    grid-template-rows:1fr;
+    grid-template-areas:"award winner";
+  }
+  #grid-container-toppoints {
+    margin: 4em;
+  }
+  .award {
+    justify-self:end;
+    padding-right:6vw;
+  }
   .outIcon img,.inIcon img {
     width:4em;
   }
@@ -599,24 +565,23 @@ td {
   .keeperName div,.defenceName div,.midfieldName div,.forwardsName div,.benchName div,.benchHead div {
     font-size:1em;
   }
-
-  #name1, #name2, #name3, #name4, #name5  {
-    font-size: 1.5em;
-  }
   .tpImage img {
-    width: 10vw;
-    padding: 1em;
+    width:10vw;
+    padding:1em;
   }
   .leader {
-    justify-self: start;
-    padding-left: 5vw;
+    justify-self:start;
+    padding-left:5vw;
   }
   .gameweek {
-    justify-self: end;
-    padding-right: 5vw;
+    justify-self:end;
+    padding-right:5vw;
   }
 }
 @media (min-width:800px) {
+  nav.navstyle ul {
+    grid-gap:13vw;
+  }
   #transfercontent {
     width:80%;
   }
@@ -626,60 +591,48 @@ td {
   #topPointsTitle {
     font-size:1.8em;
   }
+  .rulesContainer {
+  max-width: 70vw;
+  }
 }
 @media (min-width:1000px) {
-  /*.grid-container {
-    grid-template-rows:10% auto 1fr 5%;
-    grid-template-areas:"header""nav""content""footer";
-  }*/
   .grid-container-sub {
     grid-template-rows:10% auto auto 1fr 5%;
     grid-template-areas:"header""nav""subHeader""content""footer";
   }
-  nav {
+  .navstyle {
     background:#58448B;
-    position: fixed;
-    top: 10vh;
-    width: 100%;
-    height: 10vh;
-    display: block;
+    position:fixed;
+    top:10vh;
+    width:100%;
+    height:10vh;
+    display:block;
   }
-  nav#nav ul {
+  nav.navstyle ul {
     grid-gap:10vw;
   }
   li img {
     height:5vh;
   }
-  footer {
-    grid-area:footer;
-    background:#58448B;
-    display:block;
+  section.landing {
+    min-height: 90vh;
+    padding-top: 5vh;
   }
-  section {
-  min-height:80vh;
-  padding-top: 20vh;
-  /*min-width:100%;*/
-}
   h1 {
     font-size:1.4em;
   }
-main.league {
-    padding-top: 25vh;
-}
-.subHeader {
-  top: 20vh;
-  background: #321F65;
-}
-  .dateHeader {
-    margin: 17vh 0 0 0;
-}
-  #grid-container-mom {
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:1fr;
-    grid-template-areas:"award winner";
+  main.league {
+    padding-top:25vh;
   }
-  #teamcontent {
-    width:90%;
+  .subHeader {
+    top:20vh;
+    background:#321F65;
+  }
+  #name1,#name2,#name3,#name4,#name5 {
+    font-size:1.5em;
+  }
+  .dateHeader {
+    margin:17vh 0 0 0;
   }
   #transfercontent {
     width:60%;
@@ -688,55 +641,14 @@ main.league {
     justify-self:end;
     padding:0 4em;
   }
-  .rules p {
-    margin-left:auto;
-    margin-right:auto;
-    width: 800px;
+  .rules {
+    top: 10vh;
+  }
+  .rulesContainer {
+  max-width: 50vw;
   }
 }
 /******** END DESKTOP STYLES ********/
-
-.countdown-rtl {
-  direction:rtl;
-}
-#defaultCountdown h2 {
-  text-align: center;
-}
-.countdown-row {
-  clear:both;
-  width:100%;
-  padding:0px 2px;
-  text-align:center;
-}
-.countdown-section {
-  display:block;
-  float:left;
-  text-align:center;
-  padding:0.5em;
-}
-.countdown-amount {
-  font-size:200%;
-}
-.countdown-period {
-  display:block;
-  font-size:50%;
-}
-.countdown-descr {
-  display:block;
-  width:100%;
-}
-.leagueMoves {
-  color:#ddd;
-  font-size:0.7em;
-  text-align:left;
-}
-.fa-angle-up {
-  color:green;
-}
-.fa-angle-down {
-  color:red;
-}
-
 .viewportfix {
   height:100%;
   height:100vh;

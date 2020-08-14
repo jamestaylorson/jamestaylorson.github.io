@@ -28,13 +28,16 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #321F65;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #321F65;
   text-shadow: none;
+}
+::-webkit-scrollbar {
+  display:none;
 }
 
 /*

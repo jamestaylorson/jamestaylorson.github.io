@@ -28,6 +28,9 @@ $(document).ready(function () {
 // Fade out cover screen on tap/click
   $(".cover").click(function () {
       $(".cover").fadeOut(500);
+      $('html, body').animate({
+        scrollTop: $('.viewportfix').offset().top
+    }, 1);
     });
 });
 

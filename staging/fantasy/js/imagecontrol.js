@@ -1,4 +1,4 @@
-var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/2/public/values?alt=json';
+var url = 'https://spreadsheets.google.com/feeds/list/1_uPcFXdW5Qv9KmgZ69ESl6afIl84RAYO_2Ktxq5nwr0/ormaz1w/public/values?alt=json';
 
 $.getJSON(url, function appendData(data) {
 
