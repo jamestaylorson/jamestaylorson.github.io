@@ -23,6 +23,17 @@ h1 {
 h2 {
   font-weight: 700;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #e90052;
+}
+
+::selection {
+  color: #fff;
+  background: #e90052;
+}
+
 /****** MAIN SCAFFOLD ******/
 header {
   position:fixed;
@@ -90,6 +101,7 @@ li img {
   height:7vh;
   margin: 0;
 }
+
 /****** END NAVBAR ******/
 /****** COVER OVERLAY ******/
 .container {
@@ -171,6 +183,89 @@ li img {
   grid-template-rows:auto;
   grid-template-areas: "manager""keeper""keeperName""defence""defenceName""midfield""midfieldName""forwards""forwardsName""benchHead""bench""benchName";
 }
+.grid-container-weekpoints {
+  display:grid;
+  background:#fff;
+  border-radius:5px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15),0 6px 6px rgba(0,0,0,0.15);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  margin:1em 0.7em 1em 0.7em;
+  padding:1em 0;
+  gap: 0px 0px;
+  grid-template-areas: "manager" "team";
+}
+
+.grid-container-weekpoints > .manager > .managerName {
+  font-size: 1em;
+}
+
+.grid-container-weekpoints > .manager > .wpoints {
+  font-size: 0.5em;
+  padding-top: 0.2em;
+}
+
+.teamflow {
+  display: inline-block;
+  padding: 0 0.3em;
+}
+
+.grid-container-ppcontainer {
+  display: grid;
+  width: 160px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.3em 0em;
+  grid-template-areas: 
+      "face points" 
+      "name .";
+}
+
+.grid-container-ppcontainer > .points {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 700;
+  align-self: center;
+  justify-self: center;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+  background: #321F65;
+}
+
+.grid-container-ppcontainer > .name, .grid-container-ppcontainer img {
+  padding-left: 1.3em;
+}
+
+.grid-container-ppcontainer > .name {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.grid-container-ppcontainer img {
+  width: 6em;
+}
+
+.greyscale {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.face { grid-area: face; }
+
+.points { grid-area: points; }
+
+.name { grid-area: name; }
+
+
+.manager { grid-area: manager;}
+
+.team { 
+  grid-area: team;
+  text-align: center;
+}
+
 #topPointsTitle {
   grid-area:topPointsTitle;
   font-size:1.5em;
@@ -441,7 +536,7 @@ li img {
 }
 .benchHead {
   grid-area:benchHead;
-  width:70%;
+  width:50%;
   padding-bottom: : 1em;
 }
 .keeper img,.defence img,.midfield img,.forwards img,.bench img {
@@ -537,6 +632,11 @@ td {
 }
 .fa-angle-down {
   color:red;
+}
+
+.submittransfers {
+  margin: 150px 0;
+  padding: 0;
 }
 
 /******** DESKTOP STYLES ********/

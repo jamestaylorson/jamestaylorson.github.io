@@ -36,7 +36,7 @@
   position: absolute;
   top: 10vh;
   bottom: 0;
-  left: -50rem;
+  left: -80rem;
   width: 60%;
   min-height: 100vh;
   -webkit-overflow-scrolling: touch;
@@ -48,7 +48,7 @@
   z-index: 6;
 }
   .nav-list.-open {
-    width: 100%;
+    /*width: 100%;*/
     left: 0;
     padding-bottom: 4.5rem; }
     .nav-list.-open > .list.-left {
@@ -58,7 +58,7 @@
   .nav-list > .list.-left {
     background: rgba(50, 31, 101, 0.95);
     position: relative;
-    width: 60%;
+    /*width: 60%;*/
     height: 100%; }
 
  .overlay {
