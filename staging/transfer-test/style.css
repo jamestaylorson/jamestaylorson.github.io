@@ -1,0 +1,87 @@
+.grid-container-transfers {
+  display:grid;
+  background:#fff;
+  border-radius:5px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15),0 6px 6px rgba(0,0,0,0.15);
+  grid-template-columns:1.5fr 1fr 1fr 1.5fr;
+  grid-template-rows:auto;
+  margin:1.5em 0.8em;
+  padding:1em 0;
+  grid-template-areas:"manager manager manager manager""leftPlayerImage outIcon inIcon rightPlayerImage""leftPlayerImage outMil inMil rightPlayerImage""leftPlayerName PandL PandL rightPlayerName";
+}
+
+/******** TRANSFER STYLES ********/
+.dateHeader {
+  width:100%;
+  height:auto;
+  text-align:center;
+  font-size:1.5em;
+  font-weight:700;
+  margin:7vh 0 0 0;
+}
+.dateHeader:not(:first-child) {
+  margin-top:0.5em;
+}
+#transfercontent, #teamcontent {
+  grid-area:content;
+  margin:0 auto;
+  overflow:auto;
+}
+.manager {
+  grid-area:manager;
+  text-align:center;
+  font-size:2em;
+  padding-bottom:0.7em;
+}
+
+.rightPlayerImage {grid-area:rightPlayerImage;}
+.leftPlayerImage {grid-area:leftPlayerImage;}
+.rightPlayerName {grid-area:rightPlayerName;}
+.leftPlayerName {grid-area:leftPlayerName;}
+.inIcon {grid-area:inIcon;}
+.outIcon {grid-area:outIcon;}
+.inMil {grid-area:inMil;}
+.outMil {grid-area:outMil;}
+
+.leftPlayerImage, .rightPlayerImage {
+  align-self:end;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.leftPlayerImage img, .rightPlayerImage img {
+  width:70%;
+}
+.leftPlayerName, .rightPlayerName {
+  align-self:start;
+  text-align:center;
+  padding-top:0.6em;
+}
+.firstName {
+  font-weight:300;
+  font-size:0.8em;
+}
+.secondName {
+  text-transform:uppercase;
+  font-weight:700;
+  font-size:0.9em;
+}
+.PandL {
+  grid-area:PandL;
+  align-self:center;
+  text-align:center;
+  font-size:0.9em;
+}
+.outIcon, .inIcon {
+  align-self:end;
+  justify-self:center;
+}
+
+.outIcon img,.inIcon img {
+  width:3em;
+}
+.outMil, .inMil {
+  justify-self:center;
+  align-self:end;
+  font-size:1.5em;
+}
